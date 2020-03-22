@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'farapar-app';
   name = 'hello';
   cal = 23;
+  age = 33;
 }
