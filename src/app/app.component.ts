@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'farapar-app';
   name = 'hello';
+  cal = 23;
 }
