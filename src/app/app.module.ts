@@ -11,6 +11,8 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { SlickSliderComponent } from './webcomps/slick-slider/slick-slider.component';
 import { FaraparSlickSliderComponent } from './webcomps/farapar-slick-slider/farapar-slick-slider.component';
 import { FaraparFooterComponent } from './farapar-footer/farapar-footer.component';
+import { FooterComponent } from './footer/footer.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FaraparFooterComponent } from './farapar-footer/farapar-footer.componen
     TopBarComponent,
     SlickSliderComponent,
     FaraparSlickSliderComponent,
-    FaraparFooterComponent
+    FaraparFooterComponent,
+    FooterComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,
