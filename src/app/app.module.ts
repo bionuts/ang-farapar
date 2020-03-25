@@ -14,6 +14,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { IconicTextboxComponent } from './webcomps/iconic-textbox/iconic-textbox.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { IconicTextboxComponent } from './webcomps/iconic-textbox/iconic-textbox
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    IconicTextboxComponent
+    IconicTextboxComponent,
+    TopBarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
