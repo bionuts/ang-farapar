@@ -1,4 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.iransan_bold {
+  font-family: IRANSans;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.iransan_medium {
+  font-family: IRANSans;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.iransan_light {
+  font-family: IRANSans;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
