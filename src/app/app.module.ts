@@ -17,6 +17,7 @@ import { IconicTextboxComponent } from './webcomps/iconic-textbox/iconic-textbox
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SlickSliderComponent } from './webcomps/slick-slider/slick-slider.component';
+import { FaraparSlickSliderComponent } from './webcomps/farapar-slick-slider/farapar-slick-slider.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SlickSliderComponent } from './webcomps/slick-slider/slick-slider.compo
     IconicTextboxComponent,
     TopBarComponent,
     FooterComponent,
-    SlickSliderComponent
+    SlickSliderComponent,
+    FaraparSlickSliderComponent
   ],
   imports: [
     BrowserModule,
