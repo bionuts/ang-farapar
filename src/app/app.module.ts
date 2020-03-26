@@ -11,6 +11,13 @@ import { SlickSliderComponent } from './webcomps/slick-slider/slick-slider.compo
 import { FaraparSlickSliderComponent } from './webcomps/farapar-slick-slider/farapar-slick-slider.component';
 import { FooterComponent } from './footer/footer.component';
 import { TopbarComponent } from './topbar/topbar.component';
+import { AccountComponent } from './profile_panel/account/account.component';
+import { UserScoreComponent } from './profile_panel/user-score/user-score.component';
+import { UserOrdersComponent } from './profile_panel/user-orders/user-orders.component';
+import { UserAccountComponent } from './profile_panel/user-account/user-account.component';
+import { UserTransComponent } from './profile_panel/user-trans/user-trans.component';
+import { UserPlistComponent } from './profile_panel/user-plist/user-plist.component';
+import { UserBalanceComponent } from './profile_panel/user-balance/user-balance.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { TopbarComponent } from './topbar/topbar.component';
     SlickSliderComponent,
     FaraparSlickSliderComponent,
     FooterComponent,
-    TopbarComponent
+    TopbarComponent,
+    AccountComponent,
+    UserScoreComponent,
+    UserOrdersComponent,
+    UserAccountComponent,
+    UserTransComponent,
+    UserPlistComponent,
+    UserBalanceComponent
   ],
   imports: [
     BrowserModule,
