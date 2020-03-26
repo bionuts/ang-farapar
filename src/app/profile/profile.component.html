@@ -1,25 +1,27 @@
-<div class="row" style="height: 600px;background-color: #F5F5F5;margin-top: 65px;">
+<div class="row pb-4" style="background-color: #F5F5F5;margin-top: 65px;">
   <div class="col-8 offset-2 rounded shadow-sm d-flex" style="height: 85px;background-color: white;margin-top: 20px;">
     <div class="row flex-row-reverse flex-grow-1 profile_menu p-2">
-      <a href="profile/account" class="col-2">
+      <a [class.selected]="'account_style'===mainMenuSelected" routerLink="account" class="col-2">
         <i class="fa fa-user-circle mb-1"></i>حساب کاربری
       </a>
-      <a href="profile/score" class="col-2">
+      <a [class.selected]="'scores_style'===mainMenuSelected" routerLink="scores" class="col-2">
         <i class="fa fa-star mb-1"></i>امتیازها
       </a>
-      <a href="profile/orders" class="col-2">
+      <a [class.selected]="'orders_style'===mainMenuSelected" routerLink="orders" class="col-2">
         <i class="fa fa-ticket mb-1"></i>سفارش و استرداد
       </a>
-      <a href="profile/trans" class="col-2">
+      <a [class.selected]="'trans_style'===mainMenuSelected" routerLink="trans" class="col-2">
         <i class="fa fa-download mb-1"></i>تراکنش ها
       </a>
-      <a href="profile/plist" class="col-2">
+      <a [class.selected]="'plist_style'===mainMenuSelected" routerLink="plist" class="col-2">
         <i class="fa fa-group mb-1"></i>لیست مسافران
       </a>
-      <a href="profile/balance" class="col-2">
+      <a [class.selected]="'balance_style'===mainMenuSelected" routerLink="balance" class="col-2">
         <i class="fa fa-balance-scale mb-1"></i>افزایش اعتبار
       </a>
     </div>
+  </div>
+  <div class="col-8 offset-2 rounded shadow-sm" style="height: 400px;background-color: white;margin-top: 13px;">
     <router-outlet></router-outlet>
   </div>
 </div>

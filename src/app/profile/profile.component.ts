@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProfileService} from '../profile_panel/profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  mainMenuSelected: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    private profileService: ProfileService
+  ) {
   }
 
+  ngOnInit(): void {
+
+  }
+
+  setSelectedMenuStyle(val: string): void {
+    this.mainMenuSelected = val;
+  }
 }

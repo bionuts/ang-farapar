@@ -29,6 +29,12 @@
 }
 
 .profile_menu > a:hover {
+  color: #f05451;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.profile_menu > a.selected {
   color: #f05451 !important;
   opacity: 0.9;
   cursor: pointer !important;

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProfileService} from '../profile.service';
 
 @Component({
   selector: 'app-user-score',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserScoreComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private profileService: ProfileService
+  ) {
+  }
 
   ngOnInit(): void {
+    this.profileService.changeSelectedValue('user_scores');
   }
 
 }
