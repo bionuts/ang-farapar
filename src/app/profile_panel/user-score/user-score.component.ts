@@ -11,10 +11,11 @@ export class UserScoreComponent implements OnInit {
   constructor(
     private profileService: ProfileService
   ) {
+    this.profileService.selectedProfileMenuName = 'scores_style';
   }
 
   ngOnInit(): void {
-    this.profileService.changeSelectedValue('user_scores');
+
   }
 
 }

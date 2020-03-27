@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProfileService} from '../profile.service';
 
 @Component({
   selector: 'app-user-balance',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserBalanceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private profileService: ProfileService) {
+    this.profileService.selectedProfileMenuName = 'balance_style';
+  }
 
   ngOnInit(): void {
+
   }
 
 }

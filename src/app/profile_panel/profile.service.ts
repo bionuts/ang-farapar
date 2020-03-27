@@ -4,17 +4,9 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class ProfileService {
-  selectedMenu: string;
+  selectedProfileMenuName: string;
 
   constructor() {
+    this.selectedProfileMenuName = 'account_style';
   }
-
-  changeSelectedValue(val: string): void {
-    this.selectedMenu = val;
-  }
-
-  getSelectedValue(): string {
-    return this.selectedMenu;
-  }
-
 }

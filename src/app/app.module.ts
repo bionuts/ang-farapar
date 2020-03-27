@@ -11,7 +11,6 @@ import { SlickSliderComponent } from './webcomps/slick-slider/slick-slider.compo
 import { FaraparSlickSliderComponent } from './webcomps/farapar-slick-slider/farapar-slick-slider.component';
 import { FooterComponent } from './footer/footer.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { AccountComponent } from './profile_panel/account/account.component';
 import { UserScoreComponent } from './profile_panel/user-score/user-score.component';
 import { UserOrdersComponent } from './profile_panel/user-orders/user-orders.component';
 import { UserAccountComponent } from './profile_panel/user-account/user-account.component';
@@ -28,7 +27,6 @@ import { UserBalanceComponent } from './profile_panel/user-balance/user-balance.
     FaraparSlickSliderComponent,
     FooterComponent,
     TopbarComponent,
-    AccountComponent,
     UserScoreComponent,
     UserOrdersComponent,
     UserAccountComponent,

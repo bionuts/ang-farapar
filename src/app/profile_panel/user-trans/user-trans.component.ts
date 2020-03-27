@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProfileService} from '../profile.service';
 
 @Component({
   selector: 'app-user-trans',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserTransComponent implements OnInit {
 
-  constructor() { }
+  constructor(private profileService: ProfileService) {
+    this.profileService.selectedProfileMenuName = 'trans_style';
+  }
 
   ngOnInit(): void {
   }

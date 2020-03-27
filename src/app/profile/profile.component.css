@@ -29,8 +29,8 @@
 }
 
 .profile_menu > a:hover {
-  color: #f05451;
-  opacity: 0.9;
+  color: #605d5d;
+  opacity: 1.0;
   cursor: pointer;
 }
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ProfileService} from '../profile.service';
 
 @Component({
   selector: 'app-user-orders',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserOrdersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private profileService: ProfileService) {
+    this.profileService.selectedProfileMenuName = 'orders_style';
+  }
 
   ngOnInit(): void {
   }
