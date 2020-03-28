@@ -8,9 +8,7 @@ import {ProfileService} from '../profile.service';
 })
 export class UserScoreComponent implements OnInit {
 
-  constructor(
-    private profileService: ProfileService
-  ) {
+  constructor(public profileService: ProfileService) {
     this.profileService.selectedProfileMenuName = 'scores_style';
   }
 

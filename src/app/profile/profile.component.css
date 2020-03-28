@@ -20,12 +20,19 @@
   font-size: 0.9rem;
 }
 
-.profile_menu > a:last-child {
-  border-left: none;
-}
-
 .profile_menu > a > i {
   font-size: 1.5em;
+}
+
+.profile_menu > a > label {
+  text-align: center;
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #aaaaad;
+  margin: 0;
+  cursor: pointer;
 }
 
 .profile_menu > a:hover {
@@ -38,4 +45,14 @@
   color: #f05451 !important;
   opacity: 0.9;
   cursor: pointer !important;
+}
+
+label.smallscr_label {
+  text-align: center;
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.0rem;
+  color: #f05451;
+  margin: 0;
 }
