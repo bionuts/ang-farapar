@@ -18,10 +18,14 @@ import { UserTransComponent } from './profile_panel/user-trans/user-trans.compon
 import { UserPlistComponent } from './profile_panel/user-plist/user-plist.component';
 import { UserBalanceComponent } from './profile_panel/user-balance/user-balance.component';
 import { TicketingComponent } from './ticketing/ticketing.component';
-import { QuotePadComponent } from './homepage/quote-pad/quote-pad.component';
 import { TourspadComponent } from './homepage/tourspad/tourspad.component';
 import { SecJobComponent } from './homepage/sec-job/sec-job.component';
 import { MembersPadComponent } from './homepage/members-pad/members-pad.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { InFlightsComponent } from './ticketing_comps/in-flights/in-flights.component';
+import { OutFlightsComponent } from './ticketing_comps/out-flights/out-flights.component';
+import { HotelReservationsComponent } from './ticketing_comps/hotel-reservations/hotel-reservations.component';
+import { TrainTripsComponent } from './ticketing_comps/train-trips/train-trips.component';
 
 @NgModule({
   declarations: [
@@ -39,10 +43,14 @@ import { MembersPadComponent } from './homepage/members-pad/members-pad.componen
     UserPlistComponent,
     UserBalanceComponent,
     TicketingComponent,
-    QuotePadComponent,
     TourspadComponent,
     SecJobComponent,
-    MembersPadComponent
+    MembersPadComponent,
+    MainPageComponent,
+    InFlightsComponent,
+    OutFlightsComponent,
+    HotelReservationsComponent,
+    TrainTripsComponent
   ],
   imports: [
     BrowserModule,
