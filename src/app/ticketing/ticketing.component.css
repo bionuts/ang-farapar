@@ -1,0 +1,206 @@
+.bluepad {
+  /*background-color: #1285EA;*/
+  background-image: linear-gradient(to right top, #051937, #0e315f, #154b8b, #1867b9, #1285ea);
+}
+
+.shadow_white_panel {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.tabs_panel {
+
+}
+
+.ftabs {
+  font-family: IRANSans;
+  font-weight: 300;
+  font-size: 0.9em;
+  color: #c4c3ba;
+  height: 48px;
+  background-color: #f8f7ed;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  cursor: pointer;
+}
+
+.ftabs label {
+  cursor: pointer;
+}
+
+.ftabs:hover {
+  background-color: #f3f1e1;
+  color: #28324d;
+}
+
+@media (max-width: 576px) {
+  .ftabs {
+    height: 80px;
+  }
+}
+
+.factive {
+  border-top: 3px solid #f05451;
+  background-color: white !important;
+  color: #28324d !important;
+}
+
+.factive i {
+  color: #f05451 !important;
+}
+
+.white_panel {
+  background-color: white;
+  opacity: 1.0 !important;
+  border-radius: 0.25rem 0.0rem 0.25rem 0.25rem !important;
+}
+
+.finput {
+  outline: none;
+  background-color: #F2F4F5;
+  border: none;
+  color: #5e5e5e;
+  text-align: right;
+  direction: rtl;
+  padding: 13px 15px 13px 3px;
+  font-family: IRANSans;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+.finputdate {
+  outline: none;
+  background-color: #F2F4F5;
+  border: none;
+  color: #5e5e5e;
+  text-align: right;
+  direction: rtl;
+  padding: 13px 10px 13px 3px;
+  font-family: IRANSans;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+.fin {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+  border-left: none;
+  border-top-right-radius: 0.20rem !important;
+  border-bottom-right-radius: 0.20rem !important;
+}
+
+.fipass {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+}
+
+.fout {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+  border-top-left-radius: 0.20rem !important;
+  border-bottom-left-radius: 0.20rem !important;
+}
+
+.findate {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+  border-left: none;
+  border-top-right-radius: 0.20rem !important;
+  border-bottom-right-radius: 0.20rem !important;
+}
+
+.foutdate {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+  border-top-left-radius: 0.20rem !important;
+  border-bottom-left-radius: 0.20rem !important;
+}
+
+/*.btn_search {
+  width: 200px;
+}
+
+@media (max-width: 991px) {
+  .btn_search {
+    display: block;
+    width: 100%;
+  }
+}*/
+
+@media (max-width: 767px) {
+  .fin {
+    border: 1px solid #C7C7CB;
+    border-radius: 0.20rem 0.20rem 0.0rem 0.0rem;
+  }
+
+  .fout {
+    border-top: none;
+    border-radius: 0.0rem 0.0rem 0.20rem 0.20rem;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .white_panel {
+    border-radius: 0.0rem 0.0rem 0.25rem 0.25rem !important;
+  }
+}
+
+/* custom DOM */
+/* The radio button container */
+.rb_container {
+  display: block;
+  position: relative;
+  padding-right: 25px;
+  /*margin-bottom: 12px;*/
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: IRANSans;
+  font-weight: normal;
+  font-style: normal;
+  color: #707070;
+
+}
+
+/* Hide the browser's default radio button */
+.rb_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border: 2px solid #707070;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+/* When the radio button is checked, add a blue background */
+.rb_container input:checked ~ .checkmark {
+  background-color: #707070;
+}
+

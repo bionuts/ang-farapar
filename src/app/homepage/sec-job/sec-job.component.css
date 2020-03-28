@@ -1,0 +1,41 @@
+
+.maintask {
+
+}
+
+
+@media (max-width: 768px) {
+  .visa_title {
+    font-size: 30px !important;
+  }
+
+  .visa_right_title {
+    font-weight: bold !important;
+    font-size: 30px !important;
+  }
+
+  .visa_right_content {
+    font-size: 15px !important;
+  }
+}
+
+.visa_title {
+  font-family: IRANSans;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 30px
+}
+
+.visa_right_title {
+  font-family: IRANSans;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 35px
+}
+
+.visa_right_content {
+  font-family: IRANSans;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px
+}

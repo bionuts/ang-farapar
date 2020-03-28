@@ -7,10 +7,11 @@ import {UserOrdersComponent} from './profile_panel/user-orders/user-orders.compo
 import {UserTransComponent} from './profile_panel/user-trans/user-trans.component';
 import {UserPlistComponent} from './profile_panel/user-plist/user-plist.component';
 import {UserBalanceComponent} from './profile_panel/user-balance/user-balance.component';
+import {TicketingComponent} from './ticketing/ticketing.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'profile', pathMatch: 'full'},
+  {path: '', component: TicketingComponent},
   {
     path: 'profile', component: ProfileComponent, children: [
       {path: '', redirectTo: 'account', pathMatch: 'full'},

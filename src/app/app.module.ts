@@ -17,6 +17,11 @@ import { UserAccountComponent } from './profile_panel/user-account/user-account.
 import { UserTransComponent } from './profile_panel/user-trans/user-trans.component';
 import { UserPlistComponent } from './profile_panel/user-plist/user-plist.component';
 import { UserBalanceComponent } from './profile_panel/user-balance/user-balance.component';
+import { TicketingComponent } from './ticketing/ticketing.component';
+import { QuotePadComponent } from './homepage/quote-pad/quote-pad.component';
+import { TourspadComponent } from './homepage/tourspad/tourspad.component';
+import { SecJobComponent } from './homepage/sec-job/sec-job.component';
+import { MembersPadComponent } from './homepage/members-pad/members-pad.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { UserBalanceComponent } from './profile_panel/user-balance/user-balance.
     UserAccountComponent,
     UserTransComponent,
     UserPlistComponent,
-    UserBalanceComponent
+    UserBalanceComponent,
+    TicketingComponent,
+    QuotePadComponent,
+    TourspadComponent,
+    SecJobComponent,
+    MembersPadComponent
   ],
   imports: [
     BrowserModule,

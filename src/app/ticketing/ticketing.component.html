@@ -1,0 +1,116 @@
+<div id="bluepad" class="row bluepad pt-1 p-sm-2 pb-md-5" style="margin-top:65px;">
+  <div class="col-12 col-sm-12 col-md-10 offset-md-1 shadow_white_panel mt-md-5 p-1 p-md-2 rounded">
+    <div class="row" style="margin: auto">
+      <div class="col-12 tabs_panel d-flex flex-row-reverse p-0">
+        <div class="col-3 col-sm-3 col-md-auto p-0">
+          <div
+            class="ftabs factive d-flex flex-column justify-content-center flex-sm-row-reverse align-items-center  pl-md-3 pr-md-3 pl-lg-4 pr-lg-4">
+            <i class="fa fa-paper-plane ml-2"></i>
+            <label class="ml-1 mb-0">پرواز</label>
+            <label class="mb-0">داخلی</label>
+          </div>
+        </div>
+        <div class="col-3 col-sm-3 col-md-auto p-0">
+          <div
+            class="ftabs d-flex flex-column justify-content-center flex-sm-row-reverse align-items-center pl-md-3 pr-md-3 pl-lg-4 pr-lg-4">
+            <i class="fa fa-globe ml-2"></i>
+            <label class="ml-1 mb-0">پرواز</label>
+            <label class="mb-0">خارجی</label>
+          </div>
+        </div>
+        <div class="col-3 col-sm-3 col-md-auto p-0">
+          <div
+            class="ftabs d-flex flex-column justify-content-center flex-sm-row-reverse align-items-center pl-md-3 pr-md-3 pl-lg-4 pr-lg-4">
+            <i class="fa fa-hotel mb-1 ml-2"></i>
+            <label class="ml-1 mb-0">رزرو</label>
+            <label class="mb-0">هتل</label>
+          </div>
+        </div>
+        <div class="col-3 col-sm-3 col-md-auto p-0">
+          <div
+            class="ftabs d-flex flex-column justify-content-center flex-sm-row-reverse align-items-center pl-md-3 pr-md-3 pl-lg-4 pr-lg-4">
+            <i class="fa fa-train mb-1 ml-2"></i>
+            <label class="ml-1 mb-0">بلیط</label>
+            <label class="mb-0">قطار</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 white_panel pt-3 pt-lg-5 pb-3 pb-lg-5" style="">
+        <div class="row d-flex flex-row-reverse" style="margin: auto">
+          <div class="col-12 d-flex flex-row-reverse mb-1 mb-lg-3">
+            <label class="rb_container ml-3">یک طرفه
+              <input type="radio" checked="checked" name="radio">
+              <span class="checkmark"></span>
+            </label>
+            <label class="rb_container">رفت و برگشت
+              <input type="radio" name="radio">
+              <span class="checkmark"></span>
+            </label>
+
+
+          </div>
+          <div class="col-12 col-lg-4 pr-0 pl-0 pl-lg-2 mb-1">
+            <div class="row d-flex flex-row-reverse mb-2 shadow-sm" style="margin: auto">
+              <div class="col-12 col-md-6 m-0 p-0" style="">
+                <div class="fin d-flex flex-row-reverse align-items-center pr-3 pl-1"
+                     style="">
+                  <img src="{% static 'img/origin.png' %}" style="width: 16px;">
+                  <input type="text" class="finput w-100"
+                         style="" placeholder="مبدا"/>
+                </div>
+              </div>
+              <div class="col-12  col-md-6 m-0 p-0" style="">
+                <div class="fout d-flex flex-row-reverse align-items-center pr-3 pl-1"
+                     style="">
+                  <img src="{% static 'img/dst.png' %}" style="width: 16px;">
+                  <input type="text" class="finput w-100"
+                         style="" placeholder="مقصد"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 pr-0 pl-0 pl-lg-2 mb-1">
+            <div class="row d-flex flex-row-reverse mb-2 shadow-sm" style="margin: auto">
+              <div class="col-6 m-0 p-0" style="">
+                <div class="findate d-flex flex-row-reverse align-items-center pr-3 pl-1"
+                     style="">
+                  <img src="{% static 'img/cal.png' %}" style="width: 16px;">
+                  <input type="text" class="finputdate w-100"
+                         style="" placeholder="تاریخ رفت"/>
+                </div>
+              </div>
+              <div id="inflight" class="col-6  m-0 p-0" style="">
+                <div class="foutdate d-flex flex-row-reverse align-items-center pr-3 pl-1"
+                     style="">
+                  <img src="{% static 'img/cal.png' %}" style="width: 16px;">
+                  <input type="text" class="finputdate w-100"
+                         style="" placeholder="تاریخ برگشت"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-2 pr-0 pl-0 pl-lg-2 mb-1">
+            <div class="row d-flex flex-row shadow-sm mb-2" style="margin: auto">
+              <div class="col-12 m-0 p-0" style="">
+                <div class="fipass d-flex flex-row-reverse align-items-center rounded pr-3 pl-1"
+                     style="">
+                  <img src="{% static 'img/passenger.png' %}" style="width: 16px;">
+                  <input type="text" class="finputdate w-100"
+                         style="" placeholder="1 مسافر"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-2 pr-0 pl-0">
+            <button type="button" class="btn_search btn-block btn btn-lg btn-success iransan_light">جستجو</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-quote-pad></app-quote-pad>
+<app-tourspad></app-tourspad>
+<app-sec-job></app-sec-job>
+<app-members-pad></app-members-pad>
