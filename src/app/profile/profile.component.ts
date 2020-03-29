@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ProfileService} from '../profile_panel/profile.service';
-import {Router} from '@angular/router';
 
 
 @Component({

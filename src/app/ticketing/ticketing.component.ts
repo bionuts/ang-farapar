@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TicketingService} from '../ticketing_comps/ticketing.service';
 
 @Component({
   selector: 'app-ticketing',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TicketingComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public ticketingService: TicketingService
+  ) {
+  }
 
   ngOnInit(): void {
   }

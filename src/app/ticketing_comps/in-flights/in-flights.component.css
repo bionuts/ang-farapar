@@ -1,0 +1,141 @@
+
+.finput {
+  outline: none;
+  background-color: #F2F4F5;
+  border: none;
+  color: #5e5e5e;
+  text-align: right;
+  direction: rtl;
+  padding: 13px 15px 13px 3px;
+  font-family: IRANSans;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+.finputdate {
+  outline: none;
+  background-color: #F2F4F5;
+  border: none;
+  color: #5e5e5e;
+  text-align: right;
+  direction: rtl;
+  padding: 13px 10px 13px 3px;
+  font-family: IRANSans;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+.fin {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+  border-left: none;
+  border-top-right-radius: 0.20rem !important;
+  border-bottom-right-radius: 0.20rem !important;
+}
+
+.fipass {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+}
+
+.fout {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+  border-top-left-radius: 0.20rem !important;
+  border-bottom-left-radius: 0.20rem !important;
+}
+
+.findate {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+  border-left: none;
+  border-top-right-radius: 0.20rem !important;
+  border-bottom-right-radius: 0.20rem !important;
+}
+
+.foutdate {
+  cursor: pointer;
+  color: #5e5e5e;
+  background-color: #F2F4F5;
+  border: 1px solid #C7C7CB;
+  border-top-left-radius: 0.20rem !important;
+  border-bottom-left-radius: 0.20rem !important;
+}
+
+/*.btn_search {
+  width: 200px;
+}
+
+@media (max-width: 991px) {
+  .btn_search {
+    display: block;
+    width: 100%;
+  }
+}*/
+
+@media (max-width: 767px) {
+  .fin {
+    border: 1px solid #C7C7CB;
+    border-radius: 0.20rem 0.20rem 0.0rem 0.0rem;
+  }
+
+  .fout {
+    border-top: none;
+    border-radius: 0.0rem 0.0rem 0.20rem 0.20rem;
+  }
+}
+
+/* custom DOM */
+/* The radio button container */
+.rb_container {
+  display: block;
+  position: relative;
+  padding-right: 25px;
+  /*margin-bottom: 12px;*/
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: IRANSans;
+  font-weight: normal;
+  font-style: normal;
+  color: #707070;
+
+}
+
+/* Hide the browser's default radio button */
+.rb_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border: 2px solid #707070;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+/* When the radio button is checked, add a blue background */
+.rb_container input:checked ~ .checkmark {
+  background-color: #707070;
+}

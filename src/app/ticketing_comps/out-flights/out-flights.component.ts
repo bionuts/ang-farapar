@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TicketingService} from '../ticketing.service';
 
 @Component({
   selector: 'app-out-flights',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OutFlightsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public ticketingService: TicketingService
+  ) {
+    this.ticketingService.selectedTicketingMenuName = 'outflights';
+  }
 
   ngOnInit(): void {
   }
