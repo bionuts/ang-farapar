@@ -26,6 +26,7 @@ import { InFlightsComponent } from './ticketing_comps/in-flights/in-flights.comp
 import { OutFlightsComponent } from './ticketing_comps/out-flights/out-flights.component';
 import { HotelReservationsComponent } from './ticketing_comps/hotel-reservations/hotel-reservations.component';
 import { TrainTripsComponent } from './ticketing_comps/train-trips/train-trips.component';
+import { FlightConsoleComponent } from './flight-console/flight-console.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { TrainTripsComponent } from './ticketing_comps/train-trips/train-trips.c
     InFlightsComponent,
     OutFlightsComponent,
     HotelReservationsComponent,
-    TrainTripsComponent
+    TrainTripsComponent,
+    FlightConsoleComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ import {InFlightsComponent} from './ticketing_comps/in-flights/in-flights.compon
 import {OutFlightsComponent} from './ticketing_comps/out-flights/out-flights.component';
 import {HotelReservationsComponent} from './ticketing_comps/hotel-reservations/hotel-reservations.component';
 import {TrainTripsComponent} from './ticketing_comps/train-trips/train-trips.component';
+import {FlightConsoleComponent} from './flight-console/flight-console.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
       {path: 'trains', component: TrainTripsComponent}
     ]
   },
+  {path: 'flights', component: FlightConsoleComponent},
   {
     path: 'profile', component: ProfileComponent, children: [
       {path: '', component: UserAccountComponent},
