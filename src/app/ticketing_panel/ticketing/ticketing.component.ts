@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TicketingService} from '../ticketing_comps/ticketing.service';
+import {TicketingService} from '../ticketing.service';
 
 @Component({
   selector: 'app-ticketing',

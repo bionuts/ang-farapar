@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './profile_panel/profile/profile.component';
 import { IconicTextboxComponent } from './webcomps/iconic-textbox/iconic-textbox.component';
 import { SlickSliderComponent } from './webcomps/slick-slider/slick-slider.component';
 import { FaraparSlickSliderComponent } from './webcomps/farapar-slick-slider/farapar-slick-slider.component';
@@ -17,15 +17,15 @@ import { UserAccountComponent } from './profile_panel/user-account/user-account.
 import { UserTransComponent } from './profile_panel/user-trans/user-trans.component';
 import { UserPlistComponent } from './profile_panel/user-plist/user-plist.component';
 import { UserBalanceComponent } from './profile_panel/user-balance/user-balance.component';
-import { TicketingComponent } from './ticketing/ticketing.component';
+import { TicketingComponent } from './ticketing_panel/ticketing/ticketing.component';
 import { TourspadComponent } from './homepage/tourspad/tourspad.component';
 import { SecJobComponent } from './homepage/sec-job/sec-job.component';
 import { MembersPadComponent } from './homepage/members-pad/members-pad.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { InFlightsComponent } from './ticketing_comps/in-flights/in-flights.component';
-import { OutFlightsComponent } from './ticketing_comps/out-flights/out-flights.component';
-import { HotelReservationsComponent } from './ticketing_comps/hotel-reservations/hotel-reservations.component';
-import { TrainTripsComponent } from './ticketing_comps/train-trips/train-trips.component';
+import { InFlightsComponent } from './ticketing_panel/in-flights/in-flights.component';
+import { OutFlightsComponent } from './ticketing_panel/out-flights/out-flights.component';
+import { HotelReservationsComponent } from './ticketing_panel/hotel-reservations/hotel-reservations.component';
+import { TrainTripsComponent } from './ticketing_panel/train-trips/train-trips.component';
 import { FlightConsoleComponent } from './flight-console/flight-console.component';
 
 @NgModule({

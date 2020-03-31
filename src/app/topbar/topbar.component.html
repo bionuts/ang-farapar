@@ -1,4 +1,4 @@
-<div id="fnav" class="row ftopbar bg-white">
+<div id="fnav" class="row ftopbar bg-white" [style.top.px]="cssTop">
   <div class="col-6 col-sm-9 col-lg-5 pl-lg-2 pl-xl-5 d-flex flex-row align-items-center">
     <a href="tel:07132342366"
        class="btn btn-light mr-1 d-none d-sm-flex align-items-center ml-lg-2 ml-xl-5"
@@ -11,10 +11,15 @@
       <label class="d-none d-sm-inline-flex m-0" style="cursor:pointer;">ورود - ثبت نام</label>
       <i class="fa fa-user-circle m-0 ml-sm-2" style="font-size: 1.3em;position: relative;top: 2px;color: #f26c6a;"></i>
     </a>
-    <a routerLink="profile/orders" class="btn btn-light"
+    <a routerLink="profile/orders" class="btn btn-light mr-1"
        style="font-family: IRANSans,sans-serif;font-style: normal;font-size: 0.8em;font-weight: 500;">
       <label class="d-none d-sm-inline-flex m-0" style="cursor:pointer;">پیگیری خرید</label>
       <i class="fa fa-ticket-alt m-0 ml-sm-2" style="font-size: 1.3em;position: relative;top: 2px;color: #f26c6a;"></i>
+    </a>
+    <a routerLink="profile/orders" class="btn btn-light d-lg-none"
+       style="font-family: IRANSans,sans-serif;font-style: normal;font-size: 0.8em;font-weight: 500;">
+      <label class="d-none" style="cursor:pointer;">پیگیری خرید</label>
+      <i class="fa fa-bars m-0" style="font-size: 1.3em;position: relative;top: 2px;color: #f26c6a;"></i>
     </a>
   </div>
   <div class="col-6 col-sm-3 col-lg-7 d-flex flex-row-reverse pr-lg-2 pr-xl-5">

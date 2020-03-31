@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {ProfileComponent} from './profile/profile.component';
+import {ProfileComponent} from './profile_panel/profile/profile.component';
 import {UserAccountComponent} from './profile_panel/user-account/user-account.component';
 import {UserScoreComponent} from './profile_panel/user-score/user-score.component';
 import {UserOrdersComponent} from './profile_panel/user-orders/user-orders.component';
@@ -8,10 +8,10 @@ import {UserTransComponent} from './profile_panel/user-trans/user-trans.componen
 import {UserPlistComponent} from './profile_panel/user-plist/user-plist.component';
 import {UserBalanceComponent} from './profile_panel/user-balance/user-balance.component';
 import {MainPageComponent} from './main-page/main-page.component';
-import {InFlightsComponent} from './ticketing_comps/in-flights/in-flights.component';
-import {OutFlightsComponent} from './ticketing_comps/out-flights/out-flights.component';
-import {HotelReservationsComponent} from './ticketing_comps/hotel-reservations/hotel-reservations.component';
-import {TrainTripsComponent} from './ticketing_comps/train-trips/train-trips.component';
+import {InFlightsComponent} from './ticketing_panel/in-flights/in-flights.component';
+import {OutFlightsComponent} from './ticketing_panel/out-flights/out-flights.component';
+import {HotelReservationsComponent} from './ticketing_panel/hotel-reservations/hotel-reservations.component';
+import {TrainTripsComponent} from './ticketing_panel/train-trips/train-trips.component';
 import {FlightConsoleComponent} from './flight-console/flight-console.component';
 
 
