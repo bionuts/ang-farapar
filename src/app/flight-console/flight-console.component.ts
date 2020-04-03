@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
 
 /*HostListener*/
 
@@ -8,30 +8,27 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./flight-console.component.css']
 })
 export class FlightConsoleComponent implements OnInit {
-  /*public cssTop: number;
-  private prevScrollPos: number;
-  private curScrollPos: number;
-  private firstScrollPos: number;*/
+  @ViewChild('maincontent', {read: ElementRef, static: false}) elementView: ElementRef;
+  heightOfItemContent: number;
+  rotateHandleMode: boolean;
+
 
   constructor() {
-    /*this.prevScrollPos = window.pageYOffset;
-    this.firstScrollPos = this.prevScrollPos;
-    console.log('first', this.firstScrollPos);
-    sticky-top" [style.top.px]="cssTop*/
+    this.heightOfItemContent = 0;
+    this.rotateHandleMode = true;
   }
 
   ngOnInit(): void {
   }
 
-  /*@HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.curScrollPos = window.pageYOffset;
-    if (this.curScrollPos >= this.prevScrollPos) {
-      this.cssTop = 15;
+  toggle_collapse() {
+    if (this.heightOfItemContent === 0) {
+      this.heightOfItemContent = this.elementView.nativeElement.offsetHeight;
+      this.rotateHandleMode = false;
     } else {
-      this.cssTop = 75;
+      this.heightOfItemContent = 0;
+      this.rotateHandleMode = true;
     }
-    this.prevScrollPos = this.curScrollPos;
-  }*/
+  }
 
 }

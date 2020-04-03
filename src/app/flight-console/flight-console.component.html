@@ -20,23 +20,67 @@
 
   <div class="col-12 col-md-4 col-lg-3 order-0 order-md-1 mb-2 mb-md-0">
     <div id="flights_sidebar" class="row">
-      <div class="col-12 mb-1 p-1">
-        <div class="shadow-sm" style="background-color: white;height: 80px;">menu#1</div>
+      <div class="col-12 m-0 p-1">
+        <div (click)="toggle_collapse()" class="menu_item shadow-sm">
+          <div class="menu_header">
+            <label>ساعت حرکت</label>
+            <span [class.show_handle]="!rotateHandleMode">
+              <i class="fa fa-plus-square"></i>
+            </span>
+            <span [class.show_handle]="rotateHandleMode">
+              <i class="fa fa-minus-square"></i>
+            </span>
+          </div>
+          <div class="menu_content" [style.max-height.px]="heightOfItemContent">
+            <div class="inner_content" #maincontent>
+              <button type="button" class="btn btn-light">wineo</button>
+              <br/>
+              <button type="button" class="btn btn-light">wineo</button>
+              <button type="button" class="btn btn-light">wineo</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-12 mb-1 p-1">
-        <div class="shadow-sm" style="background-color: white;height: 180px;">menu#1</div>
+      <div class="col-12 m-0 p-1">
+        <div (click)="toggle_collapse()" class="menu_item shadow-sm">
+          <div class="menu_header">
+            <label>نوع بلیط</label>
+            <span [class.show_handle]="!rotateHandleMode">
+              <i class="fa fa-plus-square"></i>
+            </span>
+            <span [class.show_handle]="rotateHandleMode">
+              <i class="fa fa-minus-square"></i>
+            </span>
+          </div>
+          <div class="menu_content" [style.max-height.px]="heightOfItemContent">
+            <div class="inner_content" #maincontent>
+              <button type="button" class="btn btn-light">wineo</button>
+              <br/>
+              <button type="button" class="btn btn-light">wineo</button>
+              <button type="button" class="btn btn-light">wineo</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-12 mb-1 p-1">
-        <div class="shadow-sm" style="background-color: white;height: 80px;">menu#1</div>
+      <div class="col-12 m-0 p-1">
+        <div class="border-bottom-0" style="background-color: white;border: 1px solid #eaecee;height: 65px;">
+
+        </div>
       </div>
-      <div class="col-12 mb-1 p-1">
-        <div class="shadow-sm" style="background-color: white;height: 80px;">menu#1</div>
+      <div class="col-12 m-0 p-1">
+        <div class="border-bottom-0" style="background-color: white;border: 1px solid #eaecee;height: 65px;">
+
+        </div>
       </div>
-      <div class="col-12 mb-1 p-1">
-        <div class="shadow-sm" style="background-color: white;height: 80px;">menu#1</div>
+      <div class="col-12 m-0 p-1">
+        <div class="border-bottom-0" style="background-color: white;border: 1px solid #eaecee;height: 65px;">
+
+        </div>
       </div>
-      <div class="col-12 mb-2 p-1">
-        <div class="shadow-sm" style="background-color: white;height: 280px;">menu#1</div>
+      <div class="col-12 m-0 p-1">
+        <div class="border-bottom-0" style="background-color: white;border: 1px solid #eaecee;height: 65px;">
+
+        </div>
       </div>
     </div>
   </div>

@@ -1,3 +1,57 @@
-#flights_sidebar{
+#flights_sidebar {
   /*transition: top 0.5s;*/
+}
+
+.menu_item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  padding: 0;
+}
+
+.menu_header {
+  border-right: 3px solid #707070;
+  position: relative;
+  height: 59px;
+  color: #707070;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 0 15px 0 18px;
+}
+
+.menu_header > label {
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.0rem;
+  text-align: right;
+  cursor: pointer;
+  margin: 0;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+}
+
+.menu_header > span {
+  padding: 0;
+  margin: 0;
+  transition: all 0.35s;
+  font-size: 0.9em;
+}
+
+.menu_content {
+  background-color: #ecebff;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.35s;
+  max-height: 0;
+}
+
+.show_handle {
+  display: none;
 }
