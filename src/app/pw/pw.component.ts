@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pw.component.css']
 })
 export class PwComponent implements OnInit {
+  password: string;
 
-  constructor() { }
+  constructor() {
+    this.password='';
+   }
 
   ngOnInit(): void {
+  }
+
+  onButtonClicked() {
+    this.password = 'hello';
+  }
+
+  lfun(){
+    this.password='ticked'
   }
 
 }
