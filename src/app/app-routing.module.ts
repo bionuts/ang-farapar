@@ -13,11 +13,9 @@ import { OutFlightsComponent } from './ticketing_panel/out-flights/out-flights.c
 import { HotelReservationsComponent } from './ticketing_panel/hotel-reservations/hotel-reservations.component';
 import { TrainTripsComponent } from './ticketing_panel/train-trips/train-trips.component';
 import { FlightConsoleComponent } from './flight-console/flight-console.component';
-import { PwComponent } from './pw/pw.component';
 
 
 const routes: Routes = [
-  { path: 'pw', component: PwComponent },
   {
     path: '', component: MainPageComponent, children: [
       { path: '', component: InFlightsComponent },
