@@ -1,7 +1,5 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 
-/*HostListener*/
-
 @Component({
   selector: 'app-flight-console',
   templateUrl: './flight-console.component.html',
