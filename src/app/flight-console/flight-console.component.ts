@@ -1,4 +1,4 @@
-import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 
 /*HostListener*/
 
@@ -8,7 +8,7 @@ import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
   styleUrls: ['./flight-console.component.css']
 })
 export class FlightConsoleComponent implements OnInit {
-  @ViewChild('maincontent', {read: ElementRef, static: false}) elementView: ElementRef;
+  @ViewChild('maincontent', { read: ElementRef, static: false }) elementView: ElementRef;
   heightOfItemContent: number;
   rotateHandleMode: boolean;
 
