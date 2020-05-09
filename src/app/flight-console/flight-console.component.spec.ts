@@ -8,9 +8,9 @@ describe('FlightConsoleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FlightConsoleComponent ]
+      declarations: [FlightConsoleComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

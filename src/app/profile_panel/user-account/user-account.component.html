@@ -1,1 +1,13 @@
-<p>User Account: {{profileService.selectedProfileMenuName}}</p>
+<div class="row">
+  <div class="col-9 shadow-sm" style="background-color: white;">
+    <p>User Account: {{profileService.selectedProfileMenuName}}</p>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="col-3">
+    <app-vertical-list
+      [title]="'account'"
+      [items]="items"
+      [borderColor]="'#f05451'"
+      [space]="5"></app-vertical-list>
+  </div>
+</div>

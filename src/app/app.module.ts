@@ -27,6 +27,8 @@ import { OutFlightsComponent } from './ticketing_panel/out-flights/out-flights.c
 import { HotelReservationsComponent } from './ticketing_panel/hotel-reservations/hotel-reservations.component';
 import { TrainTripsComponent } from './ticketing_panel/train-trips/train-trips.component';
 import { FlightConsoleComponent } from './flight-console/flight-console.component';
+import { SharedModule } from './shared/shared.module';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -53,11 +55,13 @@ import { FlightConsoleComponent } from './flight-console/flight-console.componen
     HotelReservationsComponent,
     TrainTripsComponent,
     FlightConsoleComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

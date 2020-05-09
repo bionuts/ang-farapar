@@ -1,0 +1,47 @@
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: row-reverse;
+  border-right-width: 3px;
+  border-right-style: solid;
+  background-color: white;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  align-items: center;
+  padding: 0 0 0 15px;
+}
+
+.menuItem:hover {
+  background-color: #f9f9f9;
+}
+
+.menuItem > a {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 48px;
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9rem;
+  text-align: right;
+  cursor: pointer;
+  margin: 0;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+  text-decoration: none;
+  align-items: center;
+  color: #707070;
+  padding-right: 15px;
+}
+
+.menuItem > i {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}

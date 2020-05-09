@@ -1,6 +1,6 @@
 <div class="row pb-4" style="background-color: #F5F5F5;margin-top: 65px;">
   <div class="col-12 col-md-10 offset-md-1 shadow-sm d-flex"
-       style="height: 85px;background-color: white;margin-top: 16px;">
+    style="height: 85px;background-color: white;margin-top: 16px;">
     <div class="row flex-row-reverse flex-grow-1 profile_menu p-2">
       <a [class.selected]="'account_style'===profileService.selectedProfileMenuName" routerLink="account" class="col-2">
         <i class="fa fa-user-circle mb-1"></i>
@@ -22,11 +22,13 @@
         <i class="fa fa-users mb-1"></i>
         <label class="m-0 d-none d-sm-flex">لیست مسافران</label>
       </a>
-      <a [class.selected]="'balance_style'===profileService.selectedProfileMenuName" routerLink="balance" class="col-2 border-left-0">
+      <a [class.selected]="'balance_style'===profileService.selectedProfileMenuName" routerLink="balance"
+        class="col-2 border-left-0">
         <i class="fa fa-credit-card mb-1"></i>
         <label class="m-0 d-none d-sm-flex">افزایش اعتبار</label>
       </a>
-      <div class="col-12 d-flex align-items-center justify-content-center d-sm-none p-0 m-0" [ngSwitch]="profileService.selectedProfileMenuName">
+      <div class="col-12 d-flex align-items-center justify-content-center d-sm-none p-0 m-0"
+        [ngSwitch]="profileService.selectedProfileMenuName">
         <label class="smallscr_label" style="text-align: center" *ngSwitchCase="'account_style'">حساب کاربری</label>
         <label class="smallscr_label" style="text-align: center" *ngSwitchCase="'scores_style'">امتیازها</label>
         <label class="smallscr_label" style="text-align: center" *ngSwitchCase="'orders_style'">سفارش و استرداد</label>
@@ -36,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div class="col-12 col-md-10 offset-md-1 shadow-sm" style="height: 400px;background-color: white;margin-top: 13px;">
+  <div class="col-12 col-md-10 offset-md-1" style="height: 400px;margin-top: 13px;">
     <router-outlet></router-outlet>
   </div>
 </div>

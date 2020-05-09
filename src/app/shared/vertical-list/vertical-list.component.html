@@ -1,0 +1,8 @@
+<div class="row itemContainer">
+  <div class="col-12 pb-0 pt-0 pr-0" *ngFor="let item of items">
+    <div class="menuItem shadow-sm" [ngStyle]="{'border-right-color': borderColor,'margin-bottom':space+'px'}">
+      <a routerLink="{{ item.route }}">{{ item.name }}</a>
+      <i class="fa {{ item.icon }}" [ngStyle]="{color: borderColor}"></i>
+    </div>
+  </div>
+</div>
