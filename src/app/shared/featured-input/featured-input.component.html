@@ -1,0 +1,12 @@
+<div class="row input_container m-0 p-0">
+  <div class="col-12  m-0 p-0">
+    <div class="form-group m-0">
+      <label for="InputControl">{{ title }}</label>
+      <input type="text" class="form-control" id="InputControl" aria-describedby="emailHelp"
+             placeholder="{{ placeHolder }}">
+      <ng-container *ngIf="showInputHint">
+        <small class="form-text text-danger">لطفا کد ملی رو صحیح وارد کنید</small>
+      </ng-container>
+    </div>
+  </div>
+</div>

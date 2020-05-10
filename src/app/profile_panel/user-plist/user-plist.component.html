@@ -1,1 +1,23 @@
-<p>user-plist works!</p>
+<div
+  class="row plist_container shadow flex-row-reverse align-items-baseline p-3"
+  style="background-color: white;"
+>
+  <div class="col-3">
+    <app-featured-input [title]="'نام'"></app-featured-input>
+  </div>
+  <div class="col-3">
+    <app-featured-input [title]="'نام خانوادگی'"></app-featured-input>
+  </div>
+  <div class="col-3">
+    <app-featured-input [title]="'کدملی'"></app-featured-input>
+  </div>
+  <div class="col-3 align-items-baseline">
+    <button class="btn_search btn-block btn btn-primary iransan_light">
+      جستجو
+    </button>
+  </div>
+  <div class="col-12">
+    <hr />
+    <app-table-view></app-table-view>
+  </div>
+</div>

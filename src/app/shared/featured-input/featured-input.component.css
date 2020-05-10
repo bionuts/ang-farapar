@@ -1,0 +1,33 @@
+.input_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  direction: rtl;
+  text-align: right;
+}
+
+input {
+  font-family: "IRANSans(FaNum) Light", serif;
+  font-size: 0.9rem;
+  direction: rtl;
+  text-align: right;
+  padding: .175rem .6rem;
+  justify-content: center;
+}
+
+input:focus {
+  border: 1px solid #838383;
+  outline: none !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+label {
+  margin-bottom: .2rem !important;
+  font-family: "IRANSans(FaNum) Medium", serif;
+
+  color: #424242;
+  font-size: 0.9rem;
+}
+
+
