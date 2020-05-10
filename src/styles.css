@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .iransan_bold {
   font-family: IRANSans, sans-serif;
   font-weight: bold;
