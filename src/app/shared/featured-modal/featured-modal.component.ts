@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-featured-modal',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturedModalComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private el: ElementRef) {
   }
 
+  ngOnInit(): void {
+    document.body.appendChild(this.el.nativeElement);
+    document.body.css
+  }
+
+  /*ngOnDestroy() {
+    this.el.nativeElement.remove();
+  }*/
 }
