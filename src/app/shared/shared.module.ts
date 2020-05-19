@@ -4,6 +4,7 @@ import { VerticalListComponent } from './vertical-list/vertical-list.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FeaturedInputComponent } from './featured-input/featured-input.component';
 import { TableViewComponent } from './table-view/table-view.component';
+import { FeaturedModalComponent } from './featured-modal/featured-modal.component';
 
 
 
@@ -11,7 +12,8 @@ import { TableViewComponent } from './table-view/table-view.component';
   declarations: [
     VerticalListComponent,
     FeaturedInputComponent,
-    TableViewComponent],
+    TableViewComponent,
+    FeaturedModalComponent],
   imports: [
     CommonModule,
     AppRoutingModule

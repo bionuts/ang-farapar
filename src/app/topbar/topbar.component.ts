@@ -28,4 +28,8 @@ export class TopbarComponent implements OnInit {
     this.prevScrollPos = this.curScrollPos;
   }
 
+  show_modal_login() {
+    alert('hello');
+  }
+
 }
