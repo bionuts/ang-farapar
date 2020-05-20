@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, ElementRef, OnDestroy, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-featured-modal',
@@ -7,7 +7,10 @@ import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core';
 })
 export class FeaturedModalComponent implements OnInit {
 
-  constructor(private el: ElementRef) {
+  @Output() closeSignal = new EventEmitter<Boolean>();
+
+  constructor(
+    private el: ElementRef) {
   }
 
   ngOnInit(): void {
@@ -17,10 +20,10 @@ export class FeaturedModalComponent implements OnInit {
 
   close() {
     // document.body.style.overflow = 'scroll';
-    this.el.nativeElement.remove();
+    this.closeSignal.emit(false);
   }
 
-  /*ngOnDestroy() {
+  ngOnDestroy() {
     this.el.nativeElement.remove();
-  }*/
+  }
 }

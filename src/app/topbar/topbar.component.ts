@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-topbar',
@@ -7,6 +7,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 })
 export class TopbarComponent implements OnInit {
   public cssTop: number;
+  modalOpen = true;
   private prevScrollPos: number;
   private curScrollPos: number;
 
@@ -29,7 +30,7 @@ export class TopbarComponent implements OnInit {
   }
 
   show_modal_login() {
-    alert('hello');
+    this.modalOpen = !this.modalOpen;
   }
 
 }
