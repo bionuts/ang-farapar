@@ -5,6 +5,16 @@
   box-shadow: none !important;
 }
 
+.o {
+  outline: 1px solid blue;
+}
+
+.iransans_rem09 {
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
 .iransan_bold {
   font-family: IRANSans, sans-serif;
   font-weight: bold;

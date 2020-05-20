@@ -24,9 +24,10 @@ input:focus {
 
 label {
   margin-bottom: .2rem !important;
-  font-family: "IRANSans(FaNum) Medium", serif;
-  color: #505050;
-  font-size: 0.9rem;
+  font-family: IRANSans, sans-serif;
+  color: #646464;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
+  font-style: normal;
 }
-
-

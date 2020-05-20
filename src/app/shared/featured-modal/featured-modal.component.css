@@ -8,5 +8,62 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1201;
+  transition: all .2s ease;
+  /* cursor: pointer; */
+}
+
+.modal-panel {
+  /* max-width: 1100px; */
+  max-width: 500px;
+  margin: 7% auto;
+  /* 15% from the top and centered */
+  /* margin: 0 auto; */
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  transition: all .3s ease;
+  border-radius: 2px;
+  position: relative;
+  width: 100%;
+  box-sizing: content-box;
+  padding-bottom: 40px;
+}
+
+.btn-close {
+  padding: 15px !important;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
   cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.title {
+  font-family: IRANSans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 21px;
+  color: #3a3a3a;
+  line-height: 29px;
+}
+
+.subtitle {
+  font-family: IRANSans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: #3a3a3a;
+  line-height: 25px;
+}
+
+.btn-keepon {
+  font-family: IRANSans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 25px;
 }
