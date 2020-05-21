@@ -1,12 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: rgb(255, 255, 255); */
+  /* color: rgb(100, 100, 100); */
+  /* direction: rtl; */
+  /* font-family: IranSans, sans-serif; */
+  /* font-weight: 300; */
+  position: relative;
+  /* font-size: 1rem; */
+  /* line-height: 1.8; */
+  /* cursor: default; */
+  transition: padding 0.25s ease 0s;
+}
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
 
 .o {
-  outline: 1px solid blue;
+  outline: 1px solid blue !important;
 }
 
 .iransans_rem09 {

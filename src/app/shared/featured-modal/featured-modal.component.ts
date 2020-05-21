@@ -15,12 +15,10 @@ export class FeaturedModalComponent implements OnInit {
 
   ngOnInit(): void {
     document.body.appendChild(this.el.nativeElement);
-    // document.body.style.overflow = 'hidden';
   }
 
   close() {
-    // document.body.style.overflow = 'scroll';
-    this.closeSignal.emit(false);
+    // this.closeSignal.emit(false);
   }
 
   ngOnDestroy() {

@@ -11,7 +11,7 @@ input {
   font-size: 0.9rem;
   direction: rtl;
   text-align: right;
-  padding: .175rem .6rem;
+  padding: 18px 8px;
   justify-content: center;
 }
 
@@ -23,7 +23,7 @@ input:focus {
 }
 
 label {
-  margin-bottom: .2rem !important;
+  margin-bottom: 0.2rem !important;
   font-family: IRANSans, sans-serif;
   color: #646464;
   font-size: 14px;
