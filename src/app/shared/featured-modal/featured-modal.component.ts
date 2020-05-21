@@ -18,7 +18,7 @@ export class FeaturedModalComponent implements OnInit {
   }
 
   close() {
-    // this.closeSignal.emit(false);
+    this.closeSignal.emit(false);
   }
 
   ngOnDestroy() {
