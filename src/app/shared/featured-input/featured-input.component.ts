@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-featured-input',
@@ -6,6 +6,11 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./featured-input.component.css']
 })
 export class FeaturedInputComponent implements OnInit {
+  @Input() type: string; // text , number , mixed
+
+  @Input() leftLabled: boolean;
+  @Input() leftLabledValue: string;
+
   @Input() title: string;
   @Input() placeHolder: string;
   showInputHint = false;
