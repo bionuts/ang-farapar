@@ -3,9 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\profile_panel",
-    "\\src\\app\\profile_panel\\profile"
+    "\\src\\app\\profile_panel\\profile",
+    "\\src\\app\\shared",
+    "\\src\\app\\shared\\featured-input"
   ],
-  "SelectedNode": "\\src\\app\\profile_panel\\profile\\profile.component.ts",
   "PreviewInSolutionExplorer": false
 }
