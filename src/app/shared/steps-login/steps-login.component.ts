@@ -7,34 +7,51 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepsLoginComponent implements OnInit {
 
-  loginByPhone = true;
-  loginByEmail = false;
-  maintitle = 'ورود / ثبت نام به فراپر';
-  subtitle = 'شماره موبایل';
+  firstStep: boolean;
+  loginByEmail: boolean;
+  loginByPhone: boolean;
 
+
+  secondStep: boolean;
+  mobile: string = '09392474188';
+  mainTitle = 'ورود / ثبت&zwnj;نام به فراپر';
+  subTitle = 'لطفا برای ادامه، شماره موبایل خود را وارد کنید';
+  label1 = 'شماره موبایل';
   switchLinkName = 'آدرس ایمیل';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.firstStep = true;
+    this.loginByPhone = true;
+    this.loginByEmail = false;
+    this.secondStep = false;
   }
 
   NextStep() {
-    this.maintitle = 'تائید شماره موبایل';
-    this.subtitle = 'کد ۵ رقمی پیامک شده به شماره زیر را وارد کنید';
+    this.firstStep = false;
+    this.secondStep = true;
+
+    if (this.loginByPhone === true) {
+      this.mainTitle = 'تائید شماره موبایل';
+      this.subTitle = 'کد ۵ رقمی پیامک شده به شماره زیر را وارد کنید';
+    }
   }
 
   LoginByEmail() {
     if (this.loginByPhone === true) {
       this.loginByPhone = false;
-      this.maintitle = 'ورود با ایمیل';
-      this.subtitle = 'آدرس ایمیل';
+      this.mainTitle = 'ورود با ایمیل';
+      this.label1 = 'آدرس ایمیل';
+      this.subTitle = 'لطفاً برای ادامه، آدرس ایمیل خود را وارد کنید';
       this.switchLinkName = 'شماره موبایل';
       this.loginByEmail = true;
     } else if (this.loginByEmail === true) {
       this.loginByEmail = false;
-      this.maintitle = 'ورود / ثبت نام به فراپر';
-      this.subtitle = 'شماره موبایل';
+      this.label1 = 'شماره موبایل';
+      this.mainTitle = 'ورود / ثبت نام به فراپر';
+      this.subTitle = 'لطفاً برای ادامه، شماره موبایل خود را وارد کنید';
       this.switchLinkName = 'آدرس ایمیل';
       this.loginByPhone = true;
     }

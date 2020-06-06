@@ -2,8 +2,24 @@
   <label>{{ title }}</label>
 
   <ng-container [ngSwitch]="controlType">
-    <div *ngSwitchCase="'phone'" class="phone_input_container">
-      <input type="tel" class="form-control phone_input" value="9392474188" maxlength="11" />
+    <div *ngSwitchCase="'mobile'" class="mobile_input_container">
+      <input type="tel" class="form-control mobile_input" value="9392474188" maxlength="11" />
+    </div>
+    <div *ngSwitchCase="'password'" class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-key"></i>
+        </span>
+      </div>
+      <input type="password" class="form-control password_input" />
+    </div>
+    <div *ngSwitchCase="'email'" class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-envelope"></i>
+        </span>
+      </div>
+      <input type="email" class="form-control email_input" />
     </div>
   </ng-container>
   <ng-container *ngIf="showInputHint">

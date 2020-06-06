@@ -6,13 +6,8 @@
         </div>
     </div>
     <div class="row mb-1">
-        <!-- clearfix -->
-        <div class="col-12 text-center d-flex justify-content-center title mb-2">
-            {{ maintitle }}
-        </div>
-        <div class="col-12 text-center d-flex justify-content-center subtitle" style="direction: rtl;">
-            لطفاً برای ادامه، {{ subtitle }} خود را وارد کنید
-        </div>
+        <div [innerHTML]="mainTitle" class="col-12 text-center d-flex justify-content-center title mb-2"></div>
+        <div [innerHTML]="subTitle" class="col-12 text-center d-flex justify-content-center subtitle" style="direction: rtl;"></div>
     </div>
     <hr style="
         width: 65%;
@@ -21,9 +16,49 @@
         color: rgb(245, 245, 245);
         margin-bottom: 15px;
       " />
-    <div class="row mb-3 d-flex justify-content-center">
+    
+    <div class="row mb-3 d-flex justify-content-center" *ngIf="false">
+        <div class="col-11 col-sm-8 d-flex justify-content-center flex-row align-items-center">
+            <i class="fa fa-mobile-alt" style="font-size: 1rem;margin-right: 4px;"></i>
+            <label class="mobilestyle">{{ mobile }}</label>
+        </div>
+    </div>
+
+    <div class="row mb-3" *ngIf="false">
+        <div class="col d-flex flex-row confirmed_code_panel justify-content-center">            
+            <input  type="text" value="3"/>
+            <input type="text" value="7"/>
+            <input  type="text" value="9"/>
+            <input  type="text" style="border-bottom-color: #e1e1e1;"/>
+            <input  type="text" style="border-bottom-color: #e1e1e1;"/>
+        </div>        
+    </div>
+
+    <div class="row mb-4 d-flex justify-content-center" *ngIf="false">
+        <div class="col-11 col-sm-8 d-flex justify-content-center flex-row align-items-center">
+            <button (click)="LoginByEmail()" type="button" style="color: #4A90E2 !important;"
+            class="btn btn-link btn_link d-flex flex-row-reverse align-items-center pr-0">
+            <i class="fa fa-redo ml-2" style="font-size: 1rem;"></i>
+                ارسال مجدد
+            </button>
+        </div>
+    </div>
+
+    <div class="row mb-3 d-flex justify-content-center" *ngIf="false">
         <div class="col-11 col-sm-8">
-            <app-featured-input [controlType]="'phone'" [title]="subtitle"></app-featured-input>
+            <app-featured-input [controlType]="'password'"></app-featured-input>
+        </div>
+    </div>
+
+    <div class="row mb-3 d-flex justify-content-center" *ngIf="false">
+        <div class="col-11 col-sm-8">
+            <app-featured-input [controlType]="'email'"></app-featured-input>
+        </div>
+    </div>
+
+    <div class="row mb-3 d-flex justify-content-center" *ngIf="true">
+        <div class="col-11 col-sm-8">
+            <app-featured-input [controlType]="'mobile'"></app-featured-input>
         </div>
     </div>
     <div class="row d-flex justify-content-center mb-2">
@@ -34,16 +69,27 @@
             </button>
         </div>
     </div>
-    <div class="row d-flex justify-content-center">
-        <div class="col-11 col-sm-8 d-flex justify-content-end p-0">
-            <button (click)="LoginByEmail()" type="button" style="color: #4A90E2 !important;" 
-            class="btn btn-link btn_link d-flex flex-row-reverse align-items-center ">
+    <div class="row d-flex justify-content-center" *ngIf="false">
+        <div class="col-11 col-sm-8 d-flex justify-content-center">
+            <button (click)="LoginByEmail()" type="button" style="color: #4A90E2 !important;"
+            class="btn btn-link btn_link_mobile_pass d-flex flex-row-reverse align-items-center pr-0">
+                <div *ngIf="loginByEmail" style="display: inline;padding: 0;margin: 0;" class="ml-1 d-flex">
+                    <i class="fa fa-phone" style="font-size: 1rem;"></i>
+                </div>
+                ورود با شماره موبایل و رمز عبور
+            </button>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center" *ngIf="true">
+        <div class="col-11 col-sm-8 d-flex justify-content-end">
+            <button (click)="LoginByEmail()" type="button" style="color: #4A90E2 !important;"
+            class="btn btn-link btn_link d-flex flex-row-reverse align-items-center pr-0">
                 <div *ngIf="loginByPhone" style="display: inline;padding: 0;margin: 0;" class="ml-1 d-flex">
-                    <i class="fa fa-envelope-square" style="font-size: 1.3rem;"></i>
+                    <i class="fa fa-envelope" style="font-size: 1rem;"></i>
                 </div>
                 <div *ngIf="loginByEmail" style="display: inline;padding: 0;margin: 0;" class="ml-1 d-flex">
-                    <i class="fa fa-phone-square" style="font-size: 1.3rem;"></i>
-                </div>                
+                    <i class="fa fa-phone" style="font-size: 1rem;"></i>
+                </div>
                 ورود با {{ switchLinkName }}
             </button>
         </div>

@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./featured-input.component.css']
 })
 export class FeaturedInputComponent implements OnInit {
-  @Input() controlType: string; // phone , emails
+  @Input() controlType: string; // mobile , emails , password
   @Input() title: string;
   @Input() placeHolder: string;
   showInputHint = false;
@@ -15,6 +15,13 @@ export class FeaturedInputComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (this.controlType === 'email') {
+      this.title = 'آدرس ایمیل';
+    } else if (this.controlType === 'password') {
+      this.title = 'رمز عبور';
+    } else if (this.controlType === 'mobile') {
+      this.title = 'شماره موبایل';
+    }
   }
 
 }

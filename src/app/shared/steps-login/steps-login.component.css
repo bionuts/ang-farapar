@@ -1,45 +1,80 @@
 .modalwraper {
-    position: relative;
-  }
-
-.modallogo {
-    display: none;
+  position: relative;
 }
 
-  @media (max-width: 767px) {
-    
-    .modallogo {
-      display: block;
-    }
-  }
-  
-.title {
-    font-family: IRANSans, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 21px;
-    color: #3a3a3a;
-    line-height: 29px;
-  }
-  
-  .subtitle {
-    font-family: IRANSans, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 14px;
-    color: #3a3a3a;
-    line-height: 25px;
-  }
-  
-  .btn_email {
-    font-family: IRANSans, sans-serif;
-    font-style: normal;    
-  }
+.modallogo {
+  display: none;
+}
 
-  .btn_link{
-    font-family: IRANSans, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 0.85rem;
-    text-decoration: none !important;
+@media (max-width: 767px) {
+
+  .modallogo {
+    display: block;
   }
+}
+
+.title {
+  font-family: IRANSans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 21px;
+  color: #3a3a3a;
+  line-height: 29px;
+}
+
+.subtitle {
+  font-family: IRANSans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: #3a3a3a;
+  line-height: 25px;
+}
+
+.btn_email {
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+}
+
+.btn_link {
+  font-family: IRANSans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+}
+
+.btn_link_mobile_pass {
+  font-family: IRANSans, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 0.85rem;
+  text-decoration: none !important;
+}
+
+.mobilestyle {
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+  color: #424242;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.confirmed_code_panel input {
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+  color: #646464;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border: none;
+  border-bottom: 4px solid #f26c6a;
+  width: 50px;
+  margin: 0px 3px;
+  text-align: center;
+}
+
+.confirmed_code_panel input:focus{
+  outline: none;
+}
