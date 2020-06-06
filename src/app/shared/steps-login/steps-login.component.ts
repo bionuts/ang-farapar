@@ -20,7 +20,8 @@ export class StepsLoginComponent implements OnInit {
   }
 
   NextStep() {
-    return true;
+    this.maintitle = 'تائید شماره موبایل';
+    this.subtitle = 'کد ۵ رقمی پیامک شده به شماره زیر را وارد کنید';
   }
 
   LoginByEmail() {
