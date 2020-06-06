@@ -48,7 +48,7 @@
   will-change: transform;
   transition: width 2s;
   transition: max-height 0.15s ease-out;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   padding-top: 40px;
 }
 

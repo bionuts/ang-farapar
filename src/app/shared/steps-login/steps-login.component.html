@@ -8,10 +8,10 @@
     <div class="row mb-1">
         <!-- clearfix -->
         <div class="col-12 text-center d-flex justify-content-center title mb-2">
-            ورود / ثبت&zwnj;نام به فراپر
+            {{ maintitle }}
         </div>
         <div class="col-12 text-center d-flex justify-content-center subtitle" style="direction: rtl;">
-            لطفاً برای ادامه، شماره موبایل خود را وارد کنید
+            لطفاً برای ادامه، {{ subtitle }} خود را وارد کنید
         </div>
     </div>
     <hr style="
@@ -19,26 +19,32 @@
         max-width: 200px;
         margin: 0px auto;
         color: rgb(245, 245, 245);
-        margin-bottom: 24px;
+        margin-bottom: 15px;
       " />
     <div class="row mb-3 d-flex justify-content-center">
         <div class="col-11 col-sm-8">
-            <app-featured-input [controlType]="'phone'" [title]="'شماره موبایل'"></app-featured-input>
+            <app-featured-input [controlType]="'phone'" [title]="subtitle"></app-featured-input>
         </div>
     </div>
-    <div class="row mb-3 d-flex justify-content-center">
-        <div class="col-11 col-sm-8 d-flex justify-content-center">
-            <button (click)="alert('hi')" type="button" style="color: #4A90E2 !important;" class="btn btn-link btn-go-email d-flex flex-row-reverse align-items-center">
-                <i class="fa fa-envelope ml-2" style="font-size: 1.4em;"></i>
-                ورود با آدرس ایمیل
+    <div class="row d-flex justify-content-center mb-2">
+        <div class="col-11 col-sm-8">
+            <button (click)="NextStep()" class="btn btn-primary btn-block btn_email">
+                <!-- btn-primary btn-secondary -->
+                ادامه
             </button>
         </div>
     </div>
     <div class="row d-flex justify-content-center">
-        <div class="col-11 col-sm-8">
-            <button class="btn btn-primary btn-block btn-lg btn-keepon">
-                <!-- btn-primary btn-secondary -->
-                ادامه
+        <div class="col-11 col-sm-8 d-flex justify-content-end p-0">
+            <button (click)="LoginByEmail()" type="button" style="color: #4A90E2 !important;" 
+            class="btn btn-link btn_link d-flex flex-row-reverse align-items-center ">
+                <div *ngIf="loginByPhone" style="display: inline;padding: 0;margin: 0;" class="ml-1 d-flex">
+                    <i class="fa fa-envelope-square" style="font-size: 1.3rem;"></i>
+                </div>
+                <div *ngIf="loginByEmail" style="display: inline;padding: 0;margin: 0;" class="ml-1 d-flex">
+                    <i class="fa fa-phone-square" style="font-size: 1.3rem;"></i>
+                </div>                
+                ورود با {{ switchLinkName }}
             </button>
         </div>
     </div>

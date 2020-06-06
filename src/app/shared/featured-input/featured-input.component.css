@@ -9,24 +9,22 @@
   top: 50%;
   transform: translateY(-50%);
   padding: 0 6px;
-  padding-top: 3px;
+  padding-top: 4px;
   border-right: 1px dashed #c2c2c2;
   color: #c2c2c2;
   display: block;
   direction: ltr;
   text-align: center;
-  font-size: 0.9rem;
   font-family: "IRANSans", serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
 .phone_input {
   font-family: "IRANSans", serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
-  color: #646464;
-  font-size: 0.9rem;
+  color: #646464;  
   direction: ltr;
   text-align: left;
   padding-left: 42px;

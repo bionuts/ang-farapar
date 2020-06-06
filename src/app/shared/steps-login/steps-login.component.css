@@ -2,9 +2,9 @@
     position: relative;
   }
 
-  .modallogo {
+.modallogo {
     display: none;
-  }
+}
 
   @media (max-width: 767px) {
     
@@ -31,20 +31,15 @@
     line-height: 25px;
   }
   
-  .btn-go-email {
+  .btn_email {
     font-family: IRANSans, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 25px;
-    text-decoration: none !important;
+    font-style: normal;    
   }
-  
-  .btn-keepon {
+
+  .btn_link{
     font-family: IRANSans, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-    font-size: 14px;
-    color: #ffffff;
-    line-height: 25px;
+    font-size: 0.85rem;
+    text-decoration: none !important;
   }
