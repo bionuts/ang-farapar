@@ -1,13 +1,12 @@
 <div class="form-group m-0 d-flex flex-column text-right">
   <label>{{ title }}</label>
-  <input type="text" class="form-control" placeholder="{{ placeHolder }}" />
+
+  <ng-container [ngSwitch]="controlType">
+    <div *ngSwitchCase="'phone'" class="phone_input_container">
+      <input type="tel" class="form-control phone_input" value="9392474188" maxlength="11" />
+    </div>
+  </ng-container>
   <ng-container *ngIf="showInputHint">
     <small class="form-text text-danger">لطفا کد ملی رو صحیح وارد کنید</small>
   </ng-container>
-</div>
-
-<div class="form-group mt-3 d-flex flex-row align-items-center" style="position: relative;">
-  <div class="labled">+98</div>
-  <input type="email" class="form-control labledinput" value="9392474188" id="exampleInputEmail1"
-    aria-describedby="emailHelp" />
 </div>

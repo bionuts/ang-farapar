@@ -6,6 +6,7 @@ import {FeaturedInputComponent} from './featured-input/featured-input.component'
 import {TableViewComponent} from './table-view/table-view.component';
 import {FeaturedModalComponent} from './featured-modal/featured-modal.component';
 import { PhoneInputComponent } from './phone-input/phone-input.component';
+import { StepsLoginComponent } from './steps-login/steps-login.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { PhoneInputComponent } from './phone-input/phone-input.component';
     FeaturedInputComponent,
     TableViewComponent,
     FeaturedModalComponent,
-    PhoneInputComponent],
+    PhoneInputComponent,
+    StepsLoginComponent],
   imports: [
     CommonModule,
     AppRoutingModule

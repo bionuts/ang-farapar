@@ -1,0 +1,45 @@
+<div class="modalwraper">
+    <!-- <div class="row mb-5 modallogo"> -->
+    <div class="row mb-3 modallogo">
+        <div class="col d-flex flex-row justify-content-center">
+            <img class="img-fluid" style="width: 100px;" src="assets/img/lego.png" alt="لوگو فراپرا" />
+        </div>
+    </div>
+    <div class="row mb-1">
+        <!-- clearfix -->
+        <div class="col-12 text-center d-flex justify-content-center title mb-2">
+            ورود / ثبت&zwnj;نام به فراپر
+        </div>
+        <div class="col-12 text-center d-flex justify-content-center subtitle" style="direction: rtl;">
+            لطفاً برای ادامه، شماره موبایل خود را وارد کنید
+        </div>
+    </div>
+    <hr style="
+        width: 65%;
+        max-width: 200px;
+        margin: 0px auto;
+        color: rgb(245, 245, 245);
+        margin-bottom: 24px;
+      " />
+    <div class="row mb-3 d-flex justify-content-center">
+        <div class="col-11 col-sm-8">
+            <app-featured-input [controlType]="'phone'" [title]="'شماره موبایل'"></app-featured-input>
+        </div>
+    </div>
+    <div class="row mb-3 d-flex justify-content-center">
+        <div class="col-11 col-sm-8 d-flex justify-content-center">
+            <button type="button" style="color: #4A90E2 !important;" class="btn btn-link btn-go-email d-flex flex-row-reverse align-items-center">
+                <i class="fa fa-envelope ml-2" style="font-size: 1.4em;"></i>
+                ورود با آدرس ایمیل
+            </button>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-11 col-sm-8">
+            <button class="btn btn-primary btn-block btn-lg btn-keepon">
+                <!-- btn-primary btn-secondary -->
+                ادامه
+            </button>
+        </div>
+    </div>
+</div>

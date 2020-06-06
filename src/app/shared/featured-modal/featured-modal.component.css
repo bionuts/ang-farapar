@@ -52,10 +52,6 @@
   padding-top: 40px;
 }
 
-.modallogo {
-  display: none;
-}
-
 @media (min-width: 768px) {
   .modal-panel {
     top: -40px;
@@ -66,24 +62,12 @@
   .modal-panel {
     height: 100%;
   }
-
-  .modallogo {
-    display: block;
-  }
 }
 
 @media (max-width: 370px) {
   .modal-panel {
     border-radius: 0px !important;
   }
-
-  .modalwraper {
-    /* top: -40px; */
-  }
-}
-
-.modalwraper {
-  position: relative;
 }
 
 .btnicovec {
@@ -108,38 +92,3 @@
   cursor: pointer;
 }
 
-.title {
-  font-family: IRANSans, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 21px;
-  color: #3a3a3a;
-  line-height: 29px;
-}
-
-.subtitle {
-  font-family: IRANSans, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 14px;
-  color: #3a3a3a;
-  line-height: 25px;
-}
-
-.btn-go-email {
-  font-family: IRANSans, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 25px;
-  text-decoration: none !important;
-}
-
-.btn-keepon {
-  font-family: IRANSans, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  color: #ffffff;
-  line-height: 25px;
-}
