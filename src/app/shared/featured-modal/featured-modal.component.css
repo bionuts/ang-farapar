@@ -75,11 +75,34 @@
   vertical-align: middle;
 }
 
-.btn-close {
+.btnbars{
   position: absolute;
-  float: left;
   top: 0px;
   left: 0px;
+}
+
+.btn-close {
+  /* position: absolute;
+  float: left;
+  top: 0px;
+  left: 0px; */
+  padding: 16px 20px !important;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.btn-back{
+  /* position: absolute;
+  float: left;
+  top: 0px;
+  left: 50px; */
   padding: 16px 20px !important;
   background: transparent;
   border: none;
