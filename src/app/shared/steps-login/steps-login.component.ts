@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-steps-login',
@@ -15,7 +15,7 @@ export class StepsLoginComponent implements OnInit {
   loginByPhone: boolean;
 
 
-  mobile: string = '09392474188';
+  mobile = '09392474188';
   mainTitle = 'ورود / ثبت&zwnj;نام به فراپر';
   subTitle = 'لطفا برای ادامه، شماره موبایل خود را وارد کنید';
   switchLinkName = 'آدرس ایمیل';
@@ -29,6 +29,10 @@ export class StepsLoginComponent implements OnInit {
     this.thirdStep = false;
     this.loginByPhone = true;
     this.loginByEmail = false;
+  }
+
+  BackStep(){
+    
   }
 
   NextStep() {

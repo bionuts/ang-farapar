@@ -5,9 +5,9 @@ import { Component, OnInit, ElementRef, OnDestroy, EventEmitter, Output } from '
   templateUrl: './featured-modal.component.html',
   styleUrls: ['./featured-modal.component.css']
 })
-export class FeaturedModalComponent implements OnInit {
+export class FeaturedModalComponent implements OnInit, OnDestroy {
 
-  @Output() closeSignal = new EventEmitter<Boolean>();
+  @Output() closeSignal = new EventEmitter<boolean>();
 
   constructor(
     private el: ElementRef) {
@@ -19,6 +19,10 @@ export class FeaturedModalComponent implements OnInit {
 
   close() {
     this.closeSignal.emit(false);
+  }
+
+  back() {
+    
   }
 
   ngOnDestroy() {

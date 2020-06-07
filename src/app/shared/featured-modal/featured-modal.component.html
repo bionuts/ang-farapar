@@ -1,9 +1,8 @@
 <div class="fmodal">
   <div class="foverlay"></div>
   <div class="modal-panel container d-flex justify-content-center justify-content-md-start">
-    <div class="btnbars d-flex flex-row-reverse" style="width: 100%;">
-
-      <button type="button" (click)="close()" class="btn-close ml-1" style="background-color: whitesmoke;">
+    <div class="btnbars d-flex flex-row-reverse justify-content-between" style="width: 100%;padding-top: 4px;padding-right: 4px;padding-left: 4px;">
+      <button type="button" (click)="close()" class="btn-close">
         <span class="btnicovec">
           <svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -23,7 +22,7 @@
           </svg>
         </span>
       </button>
-      <button type="button" class="btn-back" style="background-color: whitesmoke;">
+      <button type="button" (click)="back()" class="btn-back" style="background-color: #f2f2f2;">
         <span class="btnicovec">
           <svg width="20px" height="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 511.991 511.991" style="enable-background:new 0 0 511.991 511.991;" xml:space="preserve">
@@ -66,10 +65,8 @@
             </g>
           </svg>
         </span>
-      </button>
-
+      </button>      
     </div>
-
-    <app-steps-login></app-steps-login>
+    <app-steps-login (back) ></app-steps-login>
   </div>
 </div>

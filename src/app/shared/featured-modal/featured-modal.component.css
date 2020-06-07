@@ -115,3 +115,10 @@
   cursor: pointer;
 }
 
+.btn-close:hover{
+  background-color: whitesmoke;
+}
+
+.btn-back:hover{
+  background-color: whitesmoke !important;
+}
