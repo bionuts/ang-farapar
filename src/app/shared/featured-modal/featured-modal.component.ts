@@ -8,6 +8,7 @@ import { Component, OnInit, ElementRef, OnDestroy, EventEmitter, Output } from '
 export class FeaturedModalComponent implements OnInit, OnDestroy {
 
   @Output() closeSignal = new EventEmitter<boolean>();
+  // @ViewChild(ChildCmp) child:ChildCmp;
 
   constructor(
     private el: ElementRef) {
@@ -22,7 +23,7 @@ export class FeaturedModalComponent implements OnInit, OnDestroy {
   }
 
   back() {
-    
+    return true;
   }
 
   ngOnDestroy() {

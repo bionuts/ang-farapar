@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-steps-login',
@@ -31,8 +31,8 @@ export class StepsLoginComponent implements OnInit {
     this.loginByEmail = false;
   }
 
-  BackStep(){
-    
+  BackStep() {
+    alert('back from login');
   }
 
   NextStep() {
