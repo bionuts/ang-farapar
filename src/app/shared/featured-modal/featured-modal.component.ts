@@ -9,6 +9,7 @@ export class FeaturedModalComponent implements OnInit, OnDestroy {
 
   @Output() closeSignal = new EventEmitter<boolean>();
   // @ViewChild(ChildCmp) child:ChildCmp;
+  backDisplay = false;
 
   constructor(
     private el: ElementRef) {
@@ -22,8 +23,8 @@ export class FeaturedModalComponent implements OnInit, OnDestroy {
     this.closeSignal.emit(false);
   }
 
-  back() {
-    return true;
+  BackToggle(display: boolean) {
+    this.backDisplay = display;
   }
 
   ngOnDestroy() {

@@ -36,7 +36,7 @@
 
     <div class="row mb-4 d-flex justify-content-center" *ngIf="secondStep && loginByPhone">
         <div class="col-11 col-sm-8 d-flex justify-content-center flex-row align-items-center">
-            <button (click)="LoginByEmail()" type="button" style="color: #4A90E2 !important;" class="btn btn-link btn_link d-flex flex-row-reverse align-items-center pr-0">
+            <button type="button" style="color: #4A90E2 !important;" class="btn btn-link btn_link d-flex flex-row-reverse align-items-center pr-0">
                 <i class="fa fa-redo ml-2" style="font-size: 1rem;"></i>
                 ارسال مجدد
             </button>
@@ -80,7 +80,7 @@
     </div>
     <div class="row d-flex justify-content-center" *ngIf="firstStep && (loginByPhone || loginByEmail)">
         <div class="col-11 col-sm-8 d-flex justify-content-end">
-            <button (click)="LoginByEmail()" type="button" style="color: #4A90E2 !important;" class="btn btn-link btn_link d-flex flex-row-reverse align-items-center pr-0">
+            <button (click)="SwitchLoginByMobileOrEmail()" type="button" style="color: #4A90E2 !important;" class="btn btn-link btn_link d-flex flex-row-reverse align-items-center pr-0">
                 <div *ngIf="loginByPhone" style="display: inline;padding: 0;margin: 0;" class="ml-1 d-flex">
                     <i class="fa fa-envelope" style="font-size: 1rem;"></i>
                 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-steps-login',
@@ -6,6 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./steps-login.component.css']
 })
 export class StepsLoginComponent implements OnInit {
+
+  @Output() displayBack = new EventEmitter<boolean>();
 
   firstStep: boolean; // login first page ( mobile / email and confirmed sms or email )
   secondStep: boolean; // confirm page
@@ -32,7 +34,34 @@ export class StepsLoginComponent implements OnInit {
   }
 
   BackStep() {
-    alert('back from login');
+    if (this.secondStep && this.loginByPhone) { // back from page: SMS Confirmation
+      this.firstStep = true;
+      this.secondStep = false;
+      this.HideSMSConfirmation();
+      this.ShowLoginByMobile();
+      this.displayBack.emit(false);
+    }
+    else if (this.firstStep && this.loginByEmail) { // back from page: Email login page
+      this.loginByEmail = false;
+      this.mainTitle = 'ورود / ثبت نام به فراپر';
+      this.subTitle = 'لطفاً برای ادامه، شماره موبایل خود را وارد کنید';
+      this.switchLinkName = 'آدرس ایمیل';
+      this.loginByPhone = true;
+      this.displayBack.emit(false);
+    }
+    else if (this.thirdStep && (this.loginByPhone || this.loginByPhone)) { // Login By Email/Mobile and Pass
+      if (this.loginByPhone) {
+        this.firstStep = false;
+        this.secondStep = true;
+        this.thirdStep = false;
+        this.mainTitle = 'تائید شماره موبایل';
+        this.subTitle = 'کد ۵ رقمی پیامک شده به شماره زیر را وارد کنید';
+      }
+      else // login by Email
+      {
+
+      }
+    }
   }
 
   NextStep() {
@@ -40,6 +69,7 @@ export class StepsLoginComponent implements OnInit {
       if (this.loginByPhone === true) {
         this.firstStep = false;
         this.secondStep = true;
+        this.displayBack.emit(true);
 
         this.mainTitle = 'تائید شماره موبایل';
         this.subTitle = 'کد ۵ رقمی پیامک شده به شماره زیر را وارد کنید';
@@ -47,19 +77,21 @@ export class StepsLoginComponent implements OnInit {
     }
   }
 
-  LoginByEmail() {
+  SwitchLoginByMobileOrEmail() {
     if (this.loginByPhone === true) {
       this.loginByPhone = false;
       this.mainTitle = 'ورود با ایمیل';
       this.subTitle = 'لطفاً برای ادامه، آدرس ایمیل خود را وارد کنید';
       this.switchLinkName = 'شماره موبایل';
       this.loginByEmail = true;
+      this.displayBack.emit(true);
     } else if (this.loginByEmail === true) {
       this.loginByEmail = false;
       this.mainTitle = 'ورود / ثبت نام به فراپر';
       this.subTitle = 'لطفاً برای ادامه، شماره موبایل خود را وارد کنید';
       this.switchLinkName = 'آدرس ایمیل';
       this.loginByPhone = true;
+      this.displayBack.emit(false);
     }
   }
 
@@ -80,5 +112,33 @@ export class StepsLoginComponent implements OnInit {
       this.subTitle = 'لطفاً برای ادامه، رمز عبور خود را وارد کنید';
     }
   }
+
+  // Show
+  private ShowLoginByMobile() {
+    this.loginByEmail = false;
+    this.mainTitle = 'ورود / ثبت نام به فراپر';
+    this.subTitle = 'لطفاً برای ادامه، شماره موبایل خود را وارد کنید';
+    this.switchLinkName = 'آدرس ایمیل';
+    this.loginByPhone = true;
+  }
+
+  private ShowLoginByEmail() { }
+
+  private ShowSMSConfirmation() { }
+
+  private ShowMobileAndPassword() { }
+
+  private ShowEmailAndPassword() { }
+
+  // Hide 
+  private HideLoginByMobile() { }
+
+  private HideLoginByEmail() { }
+
+  private HideSMSConfirmation() { }
+
+  private HideMobileAndPassword() { }
+
+  private HideEmailAndPassword() { }
 
 }
