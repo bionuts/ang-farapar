@@ -14,23 +14,23 @@
         max-width: 200px;
         margin: 0px auto;
         color: rgb(245, 245, 245);
-        margin-bottom: 15px;" />
+        margin-bottom: 5px;" />
 
-    <div class="row mb-3 d-flex justify-content-center" *ngIf="(secondStep || thirdStep) && loginByPhone">
+    <div class="row mb-2 d-flex justify-content-center" *ngIf="(secondStep || thirdStep) && loginByPhone">
         <div class="col-11 col-sm-8 d-flex justify-content-center flex-row align-items-center">
             <i class="fa fa-mobile-alt" style="font-size: 1rem;margin-right: 4px;"></i>
             <label class="mobilestyle">{{ mobile }}</label>
         </div>
     </div>
 
-    <div class="row mb-3 d-flex justify-content-center" *ngIf="(secondStep && loginByEmail) || (thirdStep && loginByEmail)">
+    <div class="row mb-2 d-flex justify-content-center" *ngIf="(secondStep && loginByEmail) || (thirdStep && loginByEmail)">
         <div class="col-11 col-sm-8 d-flex justify-content-center flex-row align-items-center">
             <i class="fa fa-envelope" style="font-size: 1rem;margin-right: 4px;"></i>
             <label class="mobilestyle text-bold">{{ email }}</label>
         </div>
     </div>
 
-    <div class="row mb-3" *ngIf="(secondStep && loginByPhone) || (thirdStep && loginByEmail)">
+    <div class="row mb-2" *ngIf="(secondStep && loginByPhone) || (thirdStep && loginByEmail)">
         <!-- must be come a component later -->
         <div class="col d-flex flex-row confirmed_code_panel justify-content-center">
             <input type="text" value="3" maxlength="1" />
@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div class="row mb-4 d-flex justify-content-center" *ngIf="(secondStep && loginByPhone) || (thirdStep && loginByEmail)">
+    <div class="row mb-2 d-flex justify-content-center" *ngIf="(secondStep && loginByPhone) || (thirdStep && loginByEmail)">
         <div class="col-11 col-sm-8 d-flex justify-content-center flex-row align-items-center">
             <button type="button" style="color: #4A90E2 !important;" class="btn btn-link btn_link d-flex flex-row-reverse align-items-center pr-0">
                 <i class="fa fa-redo ml-2" style="font-size: 1rem;"></i>
@@ -62,15 +62,16 @@
         </div>
     </div>
 
-    <div class="row mb-3 d-flex justify-content-center" style="margin-bottom: 3px;" *ngIf="(secondStep && loginByEmail) || (thirdStep && loginByPhone)">
+    <div class="row d-flex mb-0 justify-content-center" [ngClass]="{'mb-3':thirdStep && loginByPhone}" style="margin-bottom: 3px;" *ngIf="(secondStep && loginByEmail) || (thirdStep && loginByPhone)">
         <div class="col-11 col-sm-8">
             <app-featured-input [controlType]="'password'"></app-featured-input>
         </div>
     </div>
-    <div class="row mb-1 d-flex justify-content-center" *ngIf="(secondStep && loginByEmail)">
+    <div class="row mb-3 d-flex justify-content-center" *ngIf="(secondStep && loginByEmail)">
         <div class="col-11 col-sm-8 d-flex justify-content-center flex-row align-items-center">
-            <button type="button" (click)="ForgotPassword()" class="btn btn-link btn_link d-flex flex-row-reverse align-items-center text-warning">
-                <i class="fa fa-key ml-2" style="font-size: 1rem;"></i>
+            <button type="button" (click)="ForgotPassword()" 
+            style="font-weight: 200;font-size: 0.85rem;"
+            class="btn btn-link btn_link d-flex flex-row-reverse align-items-center text-warning">                
                 رمز عبورتان را فراموش کرده اید؟
             </button>
         </div>
@@ -90,7 +91,7 @@
         </div>
     </div>
 
-    <div class="row d-flex flex-row-reverse justify-content-center mb-2" *ngIf="!fourthStep">
+    <div class="row d-flex flex-row-reverse justify-content-center" [ngClass]="{'mb-4':firstStep && loginByEmail}" *ngIf="!fourthStep">
         <div class="col-11 col-sm-8">
             <button (click)="NextStep()" class="btn btn-primary btn-block loginbtn">
                 <!-- btn-primary btn-secondary -->
@@ -119,21 +120,17 @@
     <div class="row d-flex justify-content-center" *ngIf="secondStep && loginByEmail">
         <div class="col-11 col-sm-8 d-flex justify-content-center">
             <button (click)="LoginByEmailAndOncePass()" type="button" style="color: #4A90E2 !important;"
-                class="btn btn-link btn_link_mobile_pass d-flex flex-row-reverse align-items-center pr-0">
+                class="btn btn-link btn_link_mobile_pass d-flex flex-row-reverse align-items-center">
                 ورود با ایمیل و رمز یکبار مصرف
             </button>
         </div>
     </div>
 
     <div class="row d-flex justify-content-center" *ngIf="firstStep && loginByPhone">
-        <div class="col-11 col-sm-8 d-flex justify-content-end">
-            <button (click)="SwitchLoginByMobileOrEmail()" type="button" style="color: #4A90E2 !important;" class="btn btn-link btn_link d-flex flex-row-reverse align-items-center pr-0">
-                <div *ngIf="loginByPhone" style="display: inline;padding: 0;margin: 0;" class="ml-1 d-flex">
-                    <i class="fa fa-envelope" style="font-size: 1rem;"></i>
-                </div>
-                <div *ngIf="loginByEmail" style="display: inline;padding: 0;margin: 0;" class="ml-1 d-flex">
-                    <i class="fa fa-phone" style="font-size: 1rem;"></i>
-                </div>
+        <div class="col-11 col-sm-8 d-flex justify-content-center">
+            <button (click)="SwitchLoginByMobileOrEmail()" type="button" style="color: #4A90E2 !important;" 
+            class="btn btn-link btn_link d-flex flex-row-reverse align-items-center">
+                <i class="fa fa-envelope" style="font-size: 1rem;margin-left: 4px;"></i>
                 ورود با {{ switchLinkName }}
             </button>
         </div>

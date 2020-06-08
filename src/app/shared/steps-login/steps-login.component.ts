@@ -64,7 +64,7 @@ export class StepsLoginComponent implements OnInit {
       this.loginByEmail = true;
       this.displayBack.emit(true);
     } else if (this.loginByEmail && this.fourthStep) {
-      this.thirdStep = true;
+      this.secondStep = true;
       this.fourthStep = false;
       this.mainTitle = 'ورود با ایمیل';
       this.subTitle = 'لطفاً برای ادامه، آدرس ایمیل خود را وارد کنید';
