@@ -7,7 +7,6 @@
 }
 
 @media (max-width: 767px) {
-
   .modallogo {
     display: block;
   }
@@ -75,6 +74,16 @@
   text-align: center;
 }
 
-.confirmed_code_panel input:focus{
+.confirmed_code_panel input:focus {
   outline: none;
+}
+
+.forgot_password {
+  font-family: IRANSans, sans-serif;
+  font-style: normal;
+  color: #646464;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  direction: rtl;
 }

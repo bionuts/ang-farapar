@@ -12,12 +12,14 @@ export class StepsLoginComponent implements OnInit {
   firstStep: boolean; // login first page ( mobile / email and confirmed sms or email )
   secondStep: boolean; // confirm page
   thirdStep: boolean; // login with mobile/email and password
+  fourthStep: boolean; //forget password page
 
   loginByEmail: boolean;
   loginByPhone: boolean;
 
 
   mobile = '09392474188';
+  email = 'mreza.jahankhah@gmail.com';
   mainTitle = 'ورود / ثبت&zwnj;نام به فراپر';
   subTitle = 'لطفا برای ادامه، شماره موبایل خود را وارد کنید';
   switchLinkName = 'آدرس ایمیل';
@@ -40,24 +42,42 @@ export class StepsLoginComponent implements OnInit {
       this.HideSMSConfirmation();
       this.ShowLoginByMobile();
       this.displayBack.emit(false);
-    }
-    else if (this.firstStep && this.loginByEmail) { // back from page: Email login page
+    } else if (this.firstStep && this.loginByEmail) { // back from page: Email login page
       this.loginByEmail = false;
       this.mainTitle = 'ورود / ثبت نام به فراپر';
       this.subTitle = 'لطفاً برای ادامه، شماره موبایل خود را وارد کنید';
       this.switchLinkName = 'آدرس ایمیل';
       this.loginByPhone = true;
       this.displayBack.emit(false);
-    }
-    else if (this.thirdStep && (this.loginByPhone || this.loginByPhone)) { // Login By Email/Mobile and Pass
+    } else if (this.loginByEmail && this.secondStep) {
+      this.secondStep = false;
+      this.firstStep = true;
+      this.mainTitle = 'ورود با ایمیل';
+      this.subTitle = 'لطفاً برای ادامه، آدرس ایمیل خود را وارد کنید';
+      this.loginByEmail = true;
+      this.displayBack.emit(true);
+    } else if (this.loginByEmail && this.thirdStep) {
+      this.thirdStep = false;
+      this.secondStep = true;
+      this.mainTitle = 'ورود با ایمیل';
+      this.subTitle = 'لطفاً برای ادامه، آدرس ایمیل خود را وارد کنید';
+      this.loginByEmail = true;
+      this.displayBack.emit(true);
+    } else if (this.loginByEmail && this.fourthStep) {
+      this.thirdStep = true;
+      this.fourthStep = false;
+      this.mainTitle = 'ورود با ایمیل';
+      this.subTitle = 'لطفاً برای ادامه، آدرس ایمیل خود را وارد کنید';
+      this.loginByEmail = true;
+      this.displayBack.emit(true);
+    } else if (this.thirdStep && (this.loginByPhone || this.loginByPhone)) { // Login By Email/Mobile and Pass
       if (this.loginByPhone) {
         this.firstStep = false;
         this.secondStep = true;
         this.thirdStep = false;
         this.mainTitle = 'تائید شماره موبایل';
         this.subTitle = 'کد ۵ رقمی پیامک شده به شماره زیر را وارد کنید';
-      }
-      else // login by Email
+      } else // login by Email
       {
 
       }
@@ -73,6 +93,12 @@ export class StepsLoginComponent implements OnInit {
 
         this.mainTitle = 'تائید شماره موبایل';
         this.subTitle = 'کد ۵ رقمی پیامک شده به شماره زیر را وارد کنید';
+      } else if (this.loginByEmail === true) {
+        this.firstStep = false;
+        this.secondStep = true;
+        this.displayBack.emit(true);
+        this.mainTitle = 'ورود به فراپر';
+        this.subTitle = 'لطفاً برای ادامه، رمز عبور خود را وارد کنید';
       }
     }
   }
@@ -104,13 +130,38 @@ export class StepsLoginComponent implements OnInit {
     }
   }
 
-  LoginByEmailAndPass() {
-    if (this.secondStep === true && this.loginByEmail === true) {
+  LoginByEmailAndOncePass() {
+    if (this.secondStep && this.loginByEmail === true) {
       this.secondStep = false;
       this.thirdStep = true;
-      this.mainTitle = 'ورود به فراپر';
-      this.subTitle = 'لطفاً برای ادامه، رمز عبور خود را وارد کنید';
+      this.mainTitle = 'تایید ایمیل';
+      this.subTitle = 'کد ۵ رقمی ارسال شده به ایمیل زیر را وارد کنید';
     }
+  }
+
+  LoginByEmailAndPass() {
+    this.mainTitle = 'ورود به فراپر';
+    this.subTitle = 'لطفاً برای ادامه، رمز عبور خود را وارد کنید';
+
+    if (this.secondStep && this.loginByEmail) {
+      this.secondStep = false;
+      this.thirdStep = true;
+    } else if (this.thirdStep && this.loginByEmail) {
+      this.secondStep = true;
+      this.thirdStep = false;
+    }
+  }
+
+  ForgotPassword() {
+    this.mainTitle = 'بازیابی رمز عبور';
+    if (this.loginByPhone) {
+      this.subTitle = 'برای بازیابی رمز عبور، ایمیل خود را بررسی نمائید';
+    } else {
+      this.subTitle = 'برای بازیابی رمز عبور، ایمیل خود را بررسی نمائید';
+    }
+
+    this.firstStep = this.secondStep = this.thirdStep = false;
+    this.fourthStep = true;
   }
 
   // Show
