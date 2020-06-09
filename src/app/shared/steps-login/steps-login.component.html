@@ -91,7 +91,8 @@
         </div>
     </div>
 
-    <div class="row d-flex flex-row-reverse justify-content-center" [ngClass]="{'mb-4':firstStep && loginByEmail}" *ngIf="!fourthStep">
+    <div class="row d-flex flex-row-reverse justify-content-center" 
+    [ngClass]="{'mb-4':(firstStep && loginByEmail) || (thirdStep && loginByPhone)}" *ngIf="!fourthStep">
         <div class="col-11 col-sm-8">
             <button (click)="NextStep()" class="btn btn-primary btn-block loginbtn">
                 <!-- btn-primary btn-secondary -->
