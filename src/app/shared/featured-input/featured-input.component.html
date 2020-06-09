@@ -1,19 +1,22 @@
-<div class="form-group m-0 d-flex flex-column text-right">
-  <label>{{ title }}</label>
+<ng-container [ngSwitch]="controlType">
 
-  <ng-container [ngSwitch]="controlType">
-    <div *ngSwitchCase="'mobile'" class="mobile_input_container">
+  <div *ngSwitchCase="'text'" class="form-group m-0 d-flex flex-column text-right">
+    <label>{{ title }}</label>
+    <input type="text" class="form-control" />
+    <small *ngIf="showInputHint" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  <div *ngSwitchCase="'mobile'" class="form-group m-0 d-flex flex-column text-right">
+    <label>{{ title }}</label>
+    <div class="mobile_input_container">
       <input type="tel" class="form-control mobile_input" maxlength="11" />
     </div>
-    <div *ngSwitchCase="'password'" class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">
-          <i class="fa fa-key"></i>
-        </span>
-      </div>
-      <input type="password" class="form-control password_input" />
-    </div>
-    <div *ngSwitchCase="'email'" class="input-group">
+    <small *ngIf="showInputHint" class="form-text text-danger">لطفا کد ملی رو صحیح وارد کنید</small>
+  </div>
+
+  <div *ngSwitchCase="'email'" class="form-group m-0 d-flex flex-column text-right">
+    <label>{{ title }}</label>
+    <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">
           <i class="fa fa-envelope"></i>
@@ -21,11 +24,19 @@
       </div>
       <input type="email" class="form-control email_input" />
     </div>
-    <div *ngSwitchCase="'text'" class="input-group">      
-      <input type="text" class="form-control text_input" />
+    <small *ngIf="showInputHint" class="form-text text-danger">لطفا کد ملی رو صحیح وارد کنید</small>
+  </div>
+
+  <div *ngSwitchCase="'password'" class="form-group m-0 d-flex flex-column text-right">
+    <label>{{ title }}</label>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fa fa-key"></i>
+        </span>
+      </div>
+      <input type="password" class="form-control password_input" />
     </div>
-  </ng-container>
-  <ng-container *ngIf="showInputHint">
-    <small class="form-text text-danger">لطفا کد ملی رو صحیح وارد کنید</small>
-  </ng-container>
-</div>
+    <small *ngIf="showInputHint" class="form-text text-danger">لطفا کد ملی رو صحیح وارد کنید</small>
+  </div>
+</ng-container>
