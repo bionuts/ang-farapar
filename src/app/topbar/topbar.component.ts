@@ -7,7 +7,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class TopbarComponent implements OnInit {
   public cssTop: number;
-  modalOpen = true;
+  modalOpen = false;
   private prevScrollPos: number;
   private curScrollPos: number;
 

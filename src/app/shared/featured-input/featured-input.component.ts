@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./featured-input.component.css']
 })
 export class FeaturedInputComponent implements OnInit {
-  @Input() controlType: string; // mobile , emails , password
+  @Input() controlType: string; // mobile , emails , password, text
   @Input() title: string;
   @Input() placeHolder: string;
   showInputHint = false;

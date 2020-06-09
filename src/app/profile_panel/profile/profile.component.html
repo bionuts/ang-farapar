@@ -1,116 +1,53 @@
 <div class="row pb-4" style="background-color: #f5f5f5; margin-top: 65px;">
-  <div
-    class="col-12 col-md-10 offset-md-1 shadow-sm d-flex"
-    style="height: 85px; background-color: white; margin-top: 16px;"
-  >
+  <div class="col-12 col-md-10 offset-md-1 shadow-sm d-flex" style="height: 85px; background-color: white; margin-top: 16px;">
     <div class="row flex-row-reverse flex-grow-1 profile_menu p-2">
-      <a
-        [class.selected]="
+      <a [class.selected]="
           'account_style' === profileService.selectedProfileMenuName
-        "
-        routerLink="account"
-        class="col-2"
-      >
+        " routerLink="account" class="col-2">
         <i class="fa fa-user-circle mb-1 fa-2x"></i>
         <label class="m-0 d-none d-sm-flex">حساب کاربری</label>
       </a>
-      <a
-        [class.selected]="
+      <a [class.selected]="
           'scores_style' === profileService.selectedProfileMenuName
-        "
-        routerLink="scores"
-        class="col-2"
-      >
+        " routerLink="scores" class="col-2">
         <i class="fa fa-star mb-1 fa-2x"></i>
         <label class="m-0 d-none d-sm-flex">امتیازها</label>
       </a>
-      <a
-        [class.selected]="
+      <a [class.selected]="
           'orders_style' === profileService.selectedProfileMenuName
-        "
-        routerLink="orders"
-        class="col-2"
-      >
+        " routerLink="orders" class="col-2">
         <i class="fa fa-ticket-alt mb-1 fa-2x"></i>
         <label class="m-0 d-none d-sm-flex">سفارش و استرداد</label>
       </a>
-      <a
-        [class.selected]="
+      <a [class.selected]="
           'trans_style' === profileService.selectedProfileMenuName
-        "
-        routerLink="trans"
-        class="col-2"
-      >
+        " routerLink="trans" class="col-2">
         <i class="fa fa-tasks mb-1 fa-2x"></i>
         <label class="m-0 d-none d-sm-flex">تراکنش ها</label>
       </a>
-      <a
-        [class.selected]="
+      <a [class.selected]="
           'plist_style' === profileService.selectedProfileMenuName
-        "
-        routerLink="plist"
-        class="col-2"
-      >
+        " routerLink="plist" class="col-2">
         <i class="fa fa-users mb-1 fa-2x"></i>
         <label class="m-0 d-none d-sm-flex">لیست مسافران</label>
       </a>
-      <a
-        [class.selected]="
+      <a [class.selected]="
           'balance_style' === profileService.selectedProfileMenuName
-        "
-        routerLink="balance"
-        class="col-2 border-left-0"
-      >
+        " routerLink="balance" class="col-2 border-left-0">
         <i class="fa fa-credit-card mb-1 fa-2x"></i>
         <label class="m-0 d-none d-sm-flex">افزایش اعتبار</label>
       </a>
-      <div
-        class="col-12 d-flex align-items-center justify-content-center d-sm-none p-0 m-0"
-        [ngSwitch]="profileService.selectedProfileMenuName"
-      >
-        <label
-          class="smallscr_label"
-          style="text-align: center;"
-          *ngSwitchCase="'account_style'"
-          >حساب کاربری</label
-        >
-        <label
-          class="smallscr_label"
-          style="text-align: center;"
-          *ngSwitchCase="'scores_style'"
-          >امتیازها</label
-        >
-        <label
-          class="smallscr_label"
-          style="text-align: center;"
-          *ngSwitchCase="'orders_style'"
-          >سفارش و استرداد</label
-        >
-        <label
-          class="smallscr_label"
-          style="text-align: center;"
-          *ngSwitchCase="'trans_style'"
-          >تراکنش ها</label
-        >
-        <label
-          class="smallscr_label"
-          style="text-align: center;"
-          *ngSwitchCase="'plist_style'"
-          >لیست مسافران</label
-        >
-        <label
-          class="smallscr_label"
-          style="text-align: center;"
-          *ngSwitchCase="'balance_style'"
-          >افزایش اعتبار</label
-        >
+      <div class="col-12 d-flex align-items-center justify-content-center d-sm-none p-0 m-0" [ngSwitch]="profileService.selectedProfileMenuName">
+        <label class="smallscr_label" style="text-align: center;" *ngSwitchCase="'account_style'">حساب کاربری</label>
+        <label class="smallscr_label" style="text-align: center;" *ngSwitchCase="'scores_style'">امتیازها</label>
+        <label class="smallscr_label" style="text-align: center;" *ngSwitchCase="'orders_style'">سفارش و استرداد</label>
+        <label class="smallscr_label" style="text-align: center;" *ngSwitchCase="'trans_style'">تراکنش ها</label>
+        <label class="smallscr_label" style="text-align: center;" *ngSwitchCase="'plist_style'">لیست مسافران</label>
+        <label class="smallscr_label" style="text-align: center;" *ngSwitchCase="'balance_style'">افزایش اعتبار</label>
       </div>
     </div>
   </div>
-  <div
-    class="col-12 col-md-10 offset-md-1"
-    style="height: 400px; margin-top: 13px;"
-  >
+  <div class="col-12 col-md-10 offset-md-1" style="height: 400px; margin-top: 13px;">
     <router-outlet></router-outlet>
   </div>
 </div>

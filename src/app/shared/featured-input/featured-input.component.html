@@ -21,6 +21,9 @@
       </div>
       <input type="email" class="form-control email_input" />
     </div>
+    <div *ngSwitchCase="'text'" class="input-group">      
+      <input type="text" class="form-control text_input" />
+    </div>
   </ng-container>
   <ng-container *ngIf="showInputHint">
     <small class="form-text text-danger">لطفا کد ملی رو صحیح وارد کنید</small>

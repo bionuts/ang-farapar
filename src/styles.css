@@ -51,3 +51,16 @@ body {
   font-weight: 300;
   font-style: normal;
 }
+
+.iransans_h1 {
+  font-family: IRANSans, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.iransans_h2 {
+  font-family: IRANSans, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  font-style: normal;
+}
