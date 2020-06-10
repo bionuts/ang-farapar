@@ -39,7 +39,7 @@
   font-style: normal;
   color: #646464;
   direction: ltr;
-  text-align: left;  
+  text-align: left;
   padding-top: 11px;
   padding-bottom: 7px;
 }
@@ -63,7 +63,16 @@ label {
   font-style: normal;
 }
 
-input:focus{
+select {
+  font-family: "IRANSans", serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #646464;
+
+}
+
+input:focus,
+select:focus {
   box-shadow: none;
 }
 

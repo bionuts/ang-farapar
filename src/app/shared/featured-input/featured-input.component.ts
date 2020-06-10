@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SelectOptions } from '../models/select-options';
 
 @Component({
   selector: 'app-featured-input',
@@ -7,8 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FeaturedInputComponent implements OnInit {
   @Input() controlType: string; // mobile , emails , password, text
-  @Input() title: string;
-  @Input() placeHolder: string;
+  @Input() options: SelectOptions[];
+  @Input() title: string = '.';
+  @Input() placeHolder = '';
   @Input() dir = 'rtl';
   @Input() align = 'right';
   showInputHint = false;
@@ -24,6 +26,12 @@ export class FeaturedInputComponent implements OnInit {
     } else if (this.controlType === 'mobile') {
       this.title = 'شماره موبایل';
     }
-  }
 
+    this.options = [
+      { "text": 'سلام', "value": '0' },
+      { "text": 'محمد رضا جهانخواه', "value": '1' },
+      { "text": 'سلام بر حسین', "value": '2' },
+      { "text": 'خداحافظ', "value": '3' },
+    ];
+  }
 }
