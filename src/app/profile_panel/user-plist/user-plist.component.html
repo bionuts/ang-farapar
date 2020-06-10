@@ -1,20 +1,37 @@
 <div class="row plist_container shadow d-flex flex-row-reverse p-3" style="background-color: white;">
+  <div class="col-12 d-flex flex-column mb-3 text-right">
+    <h5 style="display: block;" class="alert-heading iransan_bold text-warning d-flex flex-row-reverse align-items-center"><i class="fa fa-search ml-1"></i> جستجو</h5>
+    <p class="iransan_light text-black" style="direction: rtl;">
+      برای جستجو در لیست مسافران خود پر کردن حداقل یک فیلد کافیست.
+    </p>
+  </div>
+
   <div class="col-3">
-    <app-featured-input [title]="'نام'"></app-featured-input>
+    <app-featured-input [controlType]="'text'" [align]="'right'" [dir]="'rtl'" [title]="'نام'"></app-featured-input>
   </div>
   <div class="col-3">
-    <app-featured-input [title]="'نام خانوادگی'"></app-featured-input>
+    <app-featured-input [controlType]="'text'" [align]="'right'" [dir]="'rtl'" [title]="'نام خانوادگی'"></app-featured-input>
   </div>
   <div class="col-3">
-    <app-featured-input [title]="'کدملی'"></app-featured-input>
+    <app-featured-input [controlType]="'text'" [align]="'left'" [dir]="'ltr'" [title]="'کدملی'"></app-featured-input>
   </div>
   <div class="col-3 d-flex align-items-end">
     <button class="btn_search btn-block btn btn-primary iransan_light">
       جستجو
     </button>
   </div>
+
   <div class="col-12">
-    <hr/>
+    <hr />
+  </div>
+
+  <div class="col-12 d-flex flex-row-reverse mb-3">
+    <button class="btn btn-outline-primary d-flex flex-row-reverse align-items-center iransan_medium">
+      <i class="fa fa-plus p-0" style="margin-left: 5px;"></i> درج مسافر جدید
+    </button>
+  </div>
+
+  <div class="col-12">
     <app-table-view></app-table-view>
   </div>
 </div>

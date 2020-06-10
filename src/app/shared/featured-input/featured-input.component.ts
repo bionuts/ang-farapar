@@ -9,6 +9,8 @@ export class FeaturedInputComponent implements OnInit {
   @Input() controlType: string; // mobile , emails , password, text
   @Input() title: string;
   @Input() placeHolder: string;
+  @Input() dir = 'rtl';
+  @Input() align = 'right';
   showInputHint = false;
 
   constructor() {
