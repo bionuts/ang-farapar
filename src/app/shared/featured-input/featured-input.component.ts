@@ -9,11 +9,13 @@ import { SelectOptions } from '../models/select-options';
 export class FeaturedInputComponent implements OnInit {
   @Input() controlType: string; // mobile , emails , password, text
   @Input() options: SelectOptions[];
-  @Input() title: string = '.';
+  @Input() title = '.';
   @Input() placeHolder = '';
   @Input() dir = 'rtl';
   @Input() align = 'right';
+  @Input() btnclose = false;
   showInputHint = false;
+  inputValue: string;
 
   constructor() {
   }
@@ -28,10 +30,14 @@ export class FeaturedInputComponent implements OnInit {
     }
 
     this.options = [
-      { "text": 'سلام', "value": '0' },
-      { "text": 'محمد رضا جهانخواه', "value": '1' },
-      { "text": 'سلام بر حسین', "value": '2' },
-      { "text": 'خداحافظ', "value": '3' },
+      { text: 'سلام', value: '0' },
+      { text: 'محمد رضا جهانخواه', value: '1' },
+      { text: 'سلام بر حسین', value: '2' },
+      { text: 'خداحافظ', value: '3' },
     ];
+  }
+
+  dismiss() {
+    this.inputValue = '';
   }
 }

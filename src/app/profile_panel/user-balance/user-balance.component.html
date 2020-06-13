@@ -2,7 +2,8 @@
     <div class="col-12">
         <div class="row mb-1">
             <div [innerHTML]="'اعتبار خود را در فراپر شارژ کنید'" class="col-12 text-center d-flex justify-content-center title mb-2"></div>
-            <div [innerHTML]="'با شارژ موجودی حساب خود می‌توانید با سرعت و سهولت بیشتری خرید کنید.'" class="col-12 text-center d-flex justify-content-center subtitle" style="direction: rtl;"></div>
+            <div [innerHTML]="'با شارژ موجودی حساب خود می‌توانید با سرعت و سهولت بیشتری خرید کنید.'" class="col-12 text-center d-flex justify-content-center subtitle"
+                style="direction: rtl;"></div>
         </div>
         <hr style="width: 90%;     
             margin: 15px auto;
@@ -20,7 +21,7 @@
         </div>
     </div>
     <div class="col-sm-12 col-md-4 d-flex flex-column">
-        <app-featured-input [controlType]="'text'" [dir]="'ltr'" [align]="'left'" [title]="'مبلغ افزایش شارژ را وارد کنید(ریال)'"></app-featured-input>
+        <app-featured-input [controlType]="'text'" [dir]="'ltr'" [align]="'left'" [btnclose]="true" [title]="'مبلغ افزایش شارژ را وارد کنید(ریال)'"></app-featured-input>
         <button type="button" class="btn btn-primary btn-block mt-3 mb-2" style="font-family: IRANSans, sans-serif;
         font-style: normal;">پرداخت</button>
     </div>

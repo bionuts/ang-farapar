@@ -40,6 +40,11 @@ body {
   font-style: normal;
 }
 
+.iransans_raw {
+  font-family: IRANSans, sans-serif; 
+  font-style: normal;
+}
+
 .iransan_medium {
   font-family: IRANSans, sans-serif;
   font-weight: 500;

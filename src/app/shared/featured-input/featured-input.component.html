@@ -2,7 +2,22 @@
 
   <div *ngSwitchCase="'text'" class="form-group m-0 d-flex flex-column text-right">
     <label>{{ title }}</label>
-    <input type="text" class="form-control text-{{ align }}" [style.direction]="dir" placeholder="{{ placeHolder }}" />
+    <div style="position: relative;padding: 0px;margin: 0;width: 100%;" class="d-flex align-items-center flex-row-reverse">
+      
+      <input type="text" [(ngModel)]="inputValue" 
+      [ngClass]="{'morepadding':btnclose}" 
+      class="form-control text-{{ align }} iransans_raw" 
+      [style.direction]="dir" 
+      placeholder="{{ placeHolder }}" />
+
+      <button *ngIf="btnclose" (click)="dismiss()" class="btn d-flex align-items-center justify-content-center dismiss" style="font-size: 1.2em">
+        <svg class="bi bi-x" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"></path>
+          <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"></path>
+        </svg>
+      </button>
+    </div>
+
     <small *ngIf="showInputHint" class="form-text text-muted iransan_light">We'll never share your email with anyone
       else.</small>
   </div>
