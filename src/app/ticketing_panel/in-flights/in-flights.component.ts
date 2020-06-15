@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {TicketingService} from '../ticketing.service';
+import { Component, OnInit } from '@angular/core';
+import { TicketingService } from '../ticketing.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-in-flights',
@@ -9,12 +10,17 @@ import {TicketingService} from '../ticketing.service';
 export class InFlightsComponent implements OnInit {
 
   constructor(
-    public ticketingService: TicketingService
+    public ticketingService: TicketingService,
+    private router: Router
   ) {
     this.ticketingService.selectedTicketingMenuName = 'inflights';
   }
 
   ngOnInit(): void {
+  }
+
+  goflight() {
+    this.router.navigateByUrl('/flights');
   }
 
 }
