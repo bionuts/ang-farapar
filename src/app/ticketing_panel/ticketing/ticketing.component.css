@@ -1,6 +1,7 @@
 .bluepad {
   /*background-color: #1285EA;*/
   background-image: linear-gradient(to right top, #051937, #0e315f, #154b8b, #1867b9, #1285ea);
+/* background-image: url("../../../assets/img/bgwings.jpg"); */
 }
 
 .shadow_white_panel {
