@@ -1,3 +1,59 @@
+.ftopbar {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 65px;/*65*/
+  background-color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.28);
+  z-index: 1200;
+  transition: top 0.6s;
+}
+
+.farapar_menu {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.farapar_menu li {
+  display: block;
+  flex: 0 1 auto; /* Default */
+  list-style-type: none;
+  margin-left: 5px;
+  padding: 10px 0 10px 8px;
+  cursor: pointer;
+  font-family: IRANSans, sans-serif;
+  font-weight: 300;
+  font-size: 0.8em;
+  font-style: normal;
+  color: #808080 !important;
+  transition: color 0.2s;
+}
+
+.farapar_menu li > a {
+  border-left: 1px solid #bdbdbd;
+  color: inherit;
+  padding: 0 0 0 10px;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+  text-decoration: none;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.farapar_menu li:hover {
+  color: #f05451 !important;
+  opacity: 0.9;
+}
+
+
+
 .bluepad {
   /*background-color: #1285EA;*/
   background-image: linear-gradient(to right top, #051937, #0e315f, #154b8b, #1867b9, #1285ea);
