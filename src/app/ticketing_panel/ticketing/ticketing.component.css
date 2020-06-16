@@ -52,8 +52,9 @@
 .bluepad {
   /*background-color: #1285EA;*/
   /*background-image: linear-gradient(to right top, #051937, #0e315f, #154b8b, #1867b9, #1285ea);*/
-  background-image: linear-gradient(to right, #9acbee, #8dc8eb, #80c4e7, #71c1e3, #62bede, #57bbdc, #4ab8db, #3bb5d9, #2fb1db, #22addd, #15a8df, #08a4e0);
+  /* background-image: linear-gradient(to right, #9acbee, #8dc8eb, #80c4e7, #71c1e3, #62bede, #57bbdc, #4ab8db, #3bb5d9, #2fb1db, #22addd, #15a8df, #08a4e0); */
 /* background-image: url("../../../assets/img/bgwings.jpg"); */
+background-image: linear-gradient(to left bottom, #8bbccd, #8ebccd, #91bccd, #93bdcc, #96bdcc, #a1c2d1, #acc6d6, #b6cbda, #cad5e2, #dbe0ea, #ebecf1, #f8f8f8);
 }
 
 .shadow_white_panel {
