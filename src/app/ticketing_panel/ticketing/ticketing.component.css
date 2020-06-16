@@ -3,12 +3,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  height: 65px;/*65*/
-  background-color: #fff;
-  border-bottom: 1px solid #e1e1e1;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.28);
   z-index: 1200;
-  transition: top 0.6s;
 }
 
 .farapar_menu {
@@ -36,7 +31,7 @@
 
 .farapar_menu li > a {
   border-left: 1px solid #bdbdbd;
-  color: inherit;
+  color: white;
   padding: 0 0 0 10px;
   -webkit-user-select: none; /* Chrome all / Safari all */
   -moz-user-select: none; /* Firefox all */
