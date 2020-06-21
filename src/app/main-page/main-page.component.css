@@ -1,4 +1,4 @@
 .quotepad {
-  /*position: relative !important;
-  top: 65px;*/
+  background-image: url('../../assets/img/bgpattern.png');
+  background-repeat: repeat;  
 }
