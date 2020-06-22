@@ -25,7 +25,12 @@ body {
 }
 
 .o {
-  outline: 1px solid blue !important;
+  outline: 2px solid red !important;
+}
+
+.b {
+  border: 2px solid red !important;
+  box-sizing: border-box !important;
 }
 
 .iransans_rem09 {

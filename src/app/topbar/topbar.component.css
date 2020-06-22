@@ -1,3 +1,9 @@
+@media screen and (max-width: 425px) {
+  .mainlogo {
+    height: 35px !important;
+  }
+}
+
 .ftopbar {
   overflow: hidden;
   position: fixed;
@@ -5,7 +11,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  height: 65px;/*65*/
+  height: 65px; /*65*/
   background-color: #fff;
   border-bottom: 1px solid #e1e1e1;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.28);

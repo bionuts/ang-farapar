@@ -18,39 +18,39 @@
   color: #007b5e;
 }
 
-.scrolling-wrapper {  
+.slick_wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-left: 20px;
+  padding-right: 20px;
   overflow-y: hidden;
   overflow-x: auto; /* [2] */
   -webkit-overflow-scrolling: touch; /* [3] */
-  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */ /* Hide scrollbar for IE and Edge */
+  /* -ms-overflow-style: none; */
 }
 
 /*Hide Scrollbars But Keep Functionality*/
-/* Hide scrollbar for Chrome, Safari and Opera */
-.scrolling-wrapper::-webkit-scrollbar {
-  display: none;
-}
-/* Hide scrollbar for IE and Edge */
-.scrolling-wrapper {
-  -ms-overflow-style: none;
+.slick_wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
-.scrolling-wrapper .witem {  
-  flex: 0 0 auto;
+.slick_wrapper .witem {
+  /* flex: 0 0 auto; */
   -webkit-user-select: none; /* Chrome all / Safari all */
   -moz-user-select: none; /* Firefox all */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Likely future */
-  margin-left: 25px;
+  margin-left: 20px;
 }
 
-.witem .card
-{
-  width: 220px !important;
+.slick_wrapper .witem:last-child {
+  /* margin-left: 0px !important; */
+  /* content: "<div class='witem'></div>"; */
 }
 
-@media screen and (max-width: 425px){
-
+.witem .card {
+  width: 300px !important;
 }
 
 .tour_md_btn_nextprev {
@@ -78,4 +78,10 @@
 
 .tour_btn_nextprev:hover {
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 425px) {
+  .witem .card {
+    width: 240px !important;
+  }
 }
