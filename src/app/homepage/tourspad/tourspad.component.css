@@ -1,6 +1,5 @@
-
 .tourspad {
-  background-color: #001D38;
+  background-color: #001d38;
 }
 
 .tourtitle {
@@ -19,24 +18,39 @@
   color: #007b5e;
 }
 
-.scrolling-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
+.scrolling-wrapper {  
+  overflow-y: hidden;
   overflow-x: auto; /* [2] */
   -webkit-overflow-scrolling: touch; /* [3] */
   -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
 }
 
+/*Hide Scrollbars But Keep Functionality*/
+/* Hide scrollbar for Chrome, Safari and Opera */
 .scrolling-wrapper::-webkit-scrollbar {
   display: none;
 }
+/* Hide scrollbar for IE and Edge */
+.scrolling-wrapper {
+  -ms-overflow-style: none;
+}
 
-.scrolling-wrapper .witem {
+.scrolling-wrapper .witem {  
   flex: 0 0 auto;
   -webkit-user-select: none; /* Chrome all / Safari all */
   -moz-user-select: none; /* Firefox all */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Likely future */
+  margin-left: 25px;
+}
+
+.witem .card
+{
+  width: 220px !important;
+}
+
+@media screen and (max-width: 425px){
+
 }
 
 .tour_md_btn_nextprev {
