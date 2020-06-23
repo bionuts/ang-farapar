@@ -2,20 +2,18 @@
   background-color: #001d38;
 }
 
-.tourtitle {
+@media (max-width: 768px) {
+  .visa_title {
+    font-size: 20px !important;
+  }
+}
+
+.visa_title {
   font-family: IRANSans, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 1.3rem;
+  font-size: 25px;
   color: white;
-}
-
-.membertitle {
-  font-family: IRANSans,sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 1.5rem;
-  color: #007b5e;
 }
 
 .slick_wrapper {
