@@ -41,12 +41,15 @@
   user-select: none; /* Likely future */
 }
 
-.witem:last-child {
-  /* margin-left: 0px !important; */
-  /* content: "<div class='witem'></div>"; */
+.card {
+  cursor: pointer;
 }
 
-
+/*.witem:last-child {
+   margin-left: 0px !important; */
+/* content: "<div class='witem'></div>"; 
+}
+*/
 .tour_md_btn_nextprev {
   display: block;
   width: 50px;
@@ -75,7 +78,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .witem {
-    /*width: 220px !important;*/
-  }
+  /*.witem {
+    width: 220px !important;
+  }*/
 }
