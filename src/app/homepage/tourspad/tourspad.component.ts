@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-tourspad',
@@ -9,11 +9,13 @@ export class TourspadComponent implements OnInit {
 
   @ViewChild('scrollHope') myHope: ElementRef;
 
+  cardCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   isDown = false;
   startX: number;
   scrollLeft: number;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
@@ -35,19 +37,26 @@ export class TourspadComponent implements OnInit {
   }
 
   mouseMoveHandler(e) {
-    if (!this.isDown) { return; }
+    if (!this.isDown) {
+      return;
+    }
     e.preventDefault();
     const x = e.pageX - this.myHope.nativeElement.offsetLeft;
     const walk = x - this.startX;
     this.myHope.nativeElement.scrollLeft = this.scrollLeft - walk;
-    // console.log('walk: ' + walk + ', native.scrollLeft: ' + this.myHope.nativeElement.scrollLeft);
   }
 
   RightClick() {
-    alert('hi');
+    this.myHope.nativeElement.scrollTo({
+      left: this.myHope.nativeElement.scrollLeft + this.myHope.nativeElement.querySelector('.witem').offsetWidth,
+      behavior: 'smooth'
+    });
   }
 
   LeftClick() {
-
+    this.myHope.nativeElement.scrollTo({
+      left: this.myHope.nativeElement.scrollLeft - this.myHope.nativeElement.querySelector('.witem').offsetWidth,
+      behavior: 'smooth'
+    });
   }
 }
