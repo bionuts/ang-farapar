@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-tourspad',
@@ -7,44 +7,47 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 })
 export class TourspadComponent implements OnInit {
 
+  @ViewChild('scrollHope') myHope: ElementRef;
+
   isDown = false;
   startX: number;
   scrollLeft: number;
 
-  constructor(
-    private el: ElementRef
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   mouseLeaveHandler(e) {
     this.isDown = false;
-    // slider.classList.remove("active");
-    // this.el.nativeElement.classList.remove("active");
   }
 
   mouseDownHandler(e) {
     if (e.which === 1) {
       this.isDown = true;
-      // slider.classList.add("active");
-      // this.startX = e.pageX - slider.offsetLeft;
-      this.startX = e.pageX - this.el.nativeElement.offsetLeft;
-      this.scrollLeft = this.el.nativeElement.scrollLeft;
-      alert(this.startX);
+      this.startX = e.pageX - this.myHope.nativeElement.offsetLeft;
+      this.scrollLeft = this.myHope.nativeElement.scrollLeft;
     }
   }
 
   mouseUpHandler(e) {
     this.isDown = false;
-    // slider.classList.remove("active");
   }
 
   mouseMoveHandler(e) {
     if (!this.isDown) { return; }
     e.preventDefault();
-    const x = e.pageX - this.el.nativeElement.offsetLeft;
+    const x = e.pageX - this.myHope.nativeElement.offsetLeft;
     const walk = x - this.startX;
-    this.el.nativeElement.scrollLeft = this.scrollLeft - walk;
+    this.myHope.nativeElement.scrollLeft = this.scrollLeft - walk;
+    // console.log('walk: ' + walk + ', native.scrollLeft: ' + this.myHope.nativeElement.scrollLeft);
+  }
+
+  RightClick() {
+    alert('hi');
+  }
+
+  LeftClick() {
+
   }
 }
