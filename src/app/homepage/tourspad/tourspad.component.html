@@ -1,19 +1,20 @@
-<div class="row tourspad justify-content-center pt-3 pb-0 pt-md-5 pb-md-5">
+<div class="row tourspad pt-3 pb-3 pt-md-5 pb-md-5">
 
   <div class="col-md-1 d-none d-md-flex align-items-center justify-content-end pr-0">
     <button style="width: 40px;height: 40px;padding: 3px;" class="tour_md_btn_nextprev" (click)="LeftClick()">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path fill="#ffffff"
-          d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z">
+              d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z">
         </path>
       </svg>
     </button>
   </div>
-  <div class="col-11 col-md-10 slider" style="overflow-y: auto;" (mouseleave)="mouseLeaveHandler($event)"
-    (mousemove)="mouseMoveHandler($event)" (mouseup)="mouseUpHandler($event)" (mousedown)="mouseDownHandler($event)">
+  <!--(mouseleave)="mouseLeaveHandler($event)"
+    (mousemove)="mouseMoveHandler($event)" (mouseup)="mouseUpHandler($event)" (mousedown)="mouseDownHandler($event)"-->
+  <div class="col-12 col-md-10 slider">
     <div class="row slick_wrapper" #scrollHope>
-      <div class="witem col-12 col-sm-6 col-md-4 col-lg-3" *ngFor="let i of cardCount">
-        <div class="card" style="border: none !important;">
+      <div class="witem col-11 col-sm-6 col-md-4 col-lg-3 pl-0" *ngFor="let i of cardCount">
+        <div class="card" style="border: none !important;margin-bottom: 0;">
           <img src="assets/img/taj_sunset.png" draggable="false" class="card-img-top" alt="hello">
           <div class="card-body text-right">
             <h5 class="card-title iransan_bold">به پاریس سفر کنید - {{ i }}</h5>
@@ -28,22 +29,6 @@
     </div>
   </div>
   <div class="col-md-1 d-none d-md-flex align-items-center justify-content-start pl-0">
-    <button style="width: 40px;height: 40px;padding: 3px;" class="tour_md_btn_nextprev" (click)="RightClick()">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <path fill="#ffffff"
-          d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z">
-        </path>
-      </svg>
-    </button>
-  </div>
-  <div class="col-12 d-flex d-md-none flex-row justify-content-center mb-2 mt-2" (click)="LeftClick()">
-    <button style="width: 38px;height: 38px;padding: 3px;" class="tour_md_btn_nextprev">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <path fill="#ffffff"
-          d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z">
-        </path>
-      </svg>
-    </button>
     <button style="width: 40px;height: 40px;padding: 3px;" class="tour_md_btn_nextprev" (click)="RightClick()">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path fill="#ffffff"

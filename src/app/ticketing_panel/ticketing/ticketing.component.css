@@ -54,7 +54,7 @@
 .white_panel {
   background-color: white;
   opacity: 1.0 !important;
-  border-radius: 0.25rem 0.0rem 0.25rem 0.25rem !important;
+  /* border-radius: 0.25rem 0.0rem 0.25rem 0.25rem !important; */
 }
 
 .finput {
@@ -156,7 +156,7 @@
 
 @media (max-width: 767px) {
   .white_panel {
-    border-radius: 0.0rem 0.0rem 0.25rem 0.25rem !important;
+    /* border-radius: 0.0rem 0.0rem 0.25rem 0.25rem !important; */
   }
 }
 
