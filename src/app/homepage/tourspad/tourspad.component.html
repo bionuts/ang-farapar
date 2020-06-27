@@ -9,11 +9,17 @@
       </svg>
     </button>
   </div>
-  <!--(mouseleave)="mouseLeaveHandler($event)"
-    (mousemove)="mouseMoveHandler($event)" (mouseup)="mouseUpHandler($event)" (mousedown)="mouseDownHandler($event)"-->
-  <div class="col-12 col-md-10 slider">
+  <!---->
+  <div class="col-12 col-md-10 slider"
+       (mouseleave)="mouseLeaveHandler()"
+       (mousemove)="mouseMoveHandler($event)"
+       (mouseup)="mouseUpHandler()"
+       (mousedown)="mouseDownHandler($event)"
+       (touchstart)="touchStart($event)"
+       (touchend)="touchEnd($event)"
+       (touchmove)="touchMove($event)">
     <div class="row slick_wrapper" #scrollHope>
-      <div class="witem col-11 col-sm-6 col-md-4 col-lg-3 pl-0" *ngFor="let i of cardCount">
+      <div class="witem col-10 col-sm-6 col-md-4 col-lg-3 pl-0" *ngFor="let i of cardCount">
         <div class="card" style="border: none !important;margin-bottom: 0;">
           <img src="assets/img/taj_sunset.png" draggable="false" class="card-img-top" alt="hello">
           <div class="card-body text-right">
