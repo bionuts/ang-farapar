@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-tourspad',
@@ -9,8 +9,9 @@ export class TourspadComponent implements OnInit {
 
   @ViewChild('scrollHope') myHope: ElementRef;
 
-  itemWidth = 250;
-  cardCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  itemWidth = 250.00;
+  meanWidth = 0;
+  cardCount = [0, 1, 2, 3, 4, 5, 6, 7];
   isDown = false;
   startX: number;
   scrollLeft: number;
@@ -22,7 +23,7 @@ export class TourspadComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
+    // this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
   }
 
   mouseLeaveHandler() {
@@ -70,24 +71,42 @@ export class TourspadComponent implements OnInit {
     // e.targetTouches.length
     this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
     this.tstartX = e.targetTouches[0].pageX;
+    //alert(this.myHope.nativeElement.scrollWidth + ', ' + this.myHope.nativeElement.querySelector('.witem').offsetWidth);
+    this.meanWidth = this.myHope.nativeElement.scrollWidth / (this.cardCount.length);
   }
 
   touchEnd(e) {
-    const trigger = this.itemWidth / 2;
-    if (this.twalk > trigger) {
-      alert(this.twalk + ':' + trigger);
-    } else {
-      this.myHope.nativeElement.scrollTo({
-        left: this.myHope.nativeElement.scrollLeft + this.twalk,
-        behavior: 'smooth'
-      });
+    let trigger = this.itemWidth / 3;
+    if (this.twalk > 0) { // shift from left to right
+      if (this.twalk > trigger) {
+        this.myHope.nativeElement.scrollTo({
+          left: this.myHope.nativeElement.scrollLeft - (this.meanWidth - this.twalk),
+          behavior: 'smooth'
+        });
+      } else {
+        this.myHope.nativeElement.scrollTo({
+          left: this.myHope.nativeElement.scrollLeft + this.twalk,
+          behavior: 'smooth'
+        });
+      }
+    } else { // negetive value
+      if (Math.abs(this.twalk) > trigger) {
+        this.myHope.nativeElement.scrollTo({
+          left: this.myHope.nativeElement.scrollLeft + (this.itemWidth - this.twalk),
+          behavior: 'smooth'
+        });
+      } else {
+        this.myHope.nativeElement.scrollTo({
+          left: this.myHope.nativeElement.scrollLeft + this.twalk,
+          behavior: 'smooth'
+        });
+      }
     }
   }
 
   touchMove(e) {
-    const x = e.targetTouches[0].pageX;
-    this.twalk = x - this.tstartX;
-    console.log('dif: ' + (x - this.tstartX));
+    this.twalk = e.targetTouches[0].pageX - this.tstartX;
+    console.log('wid:' + this.itemWidth + ',wk:' + this.twalk + ',' + e.targetTouches[0].pageX + ',' + this.tstartX);
   }
 
 }
