@@ -71,12 +71,12 @@ export class TourspadComponent implements OnInit {
     // e.targetTouches.length
     this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
     this.tstartX = e.targetTouches[0].pageX;
-    //alert(this.myHope.nativeElement.scrollWidth + ', ' + this.myHope.nativeElement.querySelector('.witem').offsetWidth);
+    // alert(this.myHope.nativeElement.scrollWidth + ', ' + this.myHope.nativeElement.querySelector('.witem').offsetWidth);
     this.meanWidth = this.myHope.nativeElement.scrollWidth / (this.cardCount.length);
   }
 
   touchEnd(e) {
-    let trigger = this.itemWidth / 3;
+    const trigger = this.itemWidth / 3;
     if (this.twalk > 0) { // shift from left to right
       if (this.twalk > trigger) {
         this.myHope.nativeElement.scrollTo({
