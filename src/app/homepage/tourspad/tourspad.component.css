@@ -31,7 +31,8 @@
   color: white;
 }
 
-.slick_wrapper {  
+.slick_wrapper {
+  overflow: hidden;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
@@ -51,7 +52,7 @@
   -moz-user-select: none; /* Firefox all */
   -ms-user-select: none; /* IE 10+ */
   user-select: none; /* Likely future */
-  transition: transform 0.6s ease-out ;
+  transition: transform 0.6s ease-out;
 }
 
 .card {

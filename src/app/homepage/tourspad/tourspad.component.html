@@ -1,14 +1,14 @@
-<div class="row tourspad pt-3 pb-3 pt-md-5 pb-md-5 ">
+<div class="row tourspad pt-2 pb-3 pt-md-3 pb-md-4 justify-content-center ">
   
-  <div class="col-md-6 d-flex align-items-center justify-content-end pr-0 o">
-    <button style="width: 40px;height: 40px;padding: 3px;" class="tour_md_btn_nextprev" (click)="LeftClick()">
+  <div class="col-md-5 d-flex align-items-center flex-row pl-3">
+    <button style="width: 30px;height: 30px;padding: 3px;" class="tour_md_btn_nextprev" (click)="LeftClick()">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path fill="#ffffff"
           d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z">
         </path>
       </svg>
     </button>
-    <button style="width: 40px;height: 40px;padding: 3px;" class="tour_md_btn_nextprev" (click)="RightClick()">
+    <button style="width: 30px;height: 30px;padding: 3px;" class="tour_md_btn_nextprev" (click)="RightClick()">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path fill="#ffffff"
           d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z">
@@ -16,29 +16,29 @@
       </svg>
     </button>
   </div>
-  <div class="col-6 col-md-6 text-right o">
-    <label class="iransan_medium b">دانستنی های سفر</label>
+  <div class="col-6 col-md-5 d-flex flex-row-reverse align-items-center pr-3">
+    <label class="iransan_bold m-0 p-0 text-white d-flex flex-row-reverse" style="font-size: 20px;"><i class="fa fa-umbrella-beach ml-2"></i>  دانستنی های سفر</label>
   </div>
 
-  <div class="col-12 col-md-10 slider" 
-    (touchend)="touchEnd($event)" 
+  <!--(touchend)="touchEnd($event)" 
     (touchmove)="touchMove($event)" 
-    (touchstart)="touchStart($event)" 
+    (touchstart)="touchStart($event)" -->
+  <div class="col-12 col-md-10 slider mt-3"     
     (mouseleave)="mouseLeaveHandler()"
     (mousemove)="mouseMoveHandler($event)" 
     (mouseup)="mouseUpHandler()" 
     (mousedown)="mouseDownHandler($event)">
     <div class="row slick_wrapper" #scrollHope>
-      <div class="witem col-10 col-sm-6 col-md-4 col-lg-3 o" [style.transform]="'translateX(' + transX + 'px)'" *ngFor="let i of cardCount">
+      <div class="witem col-10 col-sm-6 col-md-4 col-lg-3" [style.transform]="'translate3d(' + transX + 'px, 0px, 0px)'" *ngFor="let i of cardCount">
         <div class="card" style="border: none !important;margin-bottom: 0;">
           <img src="assets/img/taj_sunset.png" draggable="false" class="card-img-top" alt="hello">
-          <div class="card-body text-right">
+          <div class="card-body text-right mb-0">
             <h5 class="card-title iransan_bold">به پاریس سفر کنید - {{ i }}</h5>
-            <p class="card-text iransan_light" style="font-size: small">شما می توانید تقریبا هر چیزی را که به آن
+            <p class="card-text iransan_ultralight" style="font-size: small">شما می توانید تقریبا هر چیزی را که به آن
               احتیاج
               دارید در فروشگاه های
               بزرگ و تاریخی
-              بیابید</p>
+              بیابید</p>              
           </div>
         </div>
       </div>

@@ -25,15 +25,10 @@ export class TourspadComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-
   }
 
   ngAfterViewInit(): void {
     this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
-  }
-
-  mouseLeaveHandler() {
-    this.isDown = false;
   }
 
   mouseDownHandler(e) {
@@ -46,6 +41,10 @@ export class TourspadComponent implements OnInit, AfterViewInit {
   }
 
   mouseUpHandler() {
+    this.isDown = false;
+  }
+
+  mouseLeaveHandler() {
     this.isDown = false;
   }
 
