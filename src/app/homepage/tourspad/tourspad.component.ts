@@ -1,17 +1,17 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-tourspad',
   templateUrl: './tourspad.component.html',
   styleUrls: ['./tourspad.component.css']
 })
-export class TourspadComponent implements OnInit {
+export class TourspadComponent implements OnInit, AfterViewInit {
 
   @ViewChild('scrollHope') myHope: ElementRef;
 
-  itemWidth = 250.00;
+  itemWidth = 0;
   meanWidth = 0;
-  cardCount = [0, 1, 2, 3, 4, 5, 6, 7];
+  cardCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   isDown = false;
   startX: number;
   scrollLeft: number;
@@ -19,11 +19,17 @@ export class TourspadComponent implements OnInit {
   tstartX: number;
   twalk: number;
 
+  transX = 0;
+
   constructor() {
   }
 
   ngOnInit(): void {
-    // this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
+
+  }
+
+  ngAfterViewInit(): void {
+    this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
   }
 
   mouseLeaveHandler() {
@@ -54,17 +60,19 @@ export class TourspadComponent implements OnInit {
   }
 
   RightClick() {
-    this.myHope.nativeElement.scrollTo({
-      left: this.myHope.nativeElement.scrollLeft + this.myHope.nativeElement.querySelector('.witem').offsetWidth,
-      behavior: 'smooth'
-    });
+    this.transX -= this.itemWidth;
+    // this.myHope.nativeElement.scrollTo({
+    //   left: this.myHope.nativeElement.scrollLeft + this.myHope.nativeElement.querySelector('.witem').offsetWidth,
+    //   behavior: 'smooth'
+    // });
   }
 
   LeftClick() {
-    this.myHope.nativeElement.scrollTo({
-      left: this.myHope.nativeElement.scrollLeft - this.myHope.nativeElement.querySelector('.witem').offsetWidth,
-      behavior: 'smooth'
-    });
+    this.transX += this.itemWidth;
+    // this.myHope.nativeElement.scrollTo({
+    //   left: this.myHope.nativeElement.scrollLeft - this.myHope.nativeElement.querySelector('.witem').offsetWidth,
+    //   behavior: 'smooth'
+    // });
   }
 
   touchStart(e) {
