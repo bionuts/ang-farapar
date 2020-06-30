@@ -1,6 +1,6 @@
-<div class="row tourspad pt-2 pb-3 pt-md-3 pb-md-4 justify-content-center ">
+<div class="row tourspad pt-2 pb-3 pt-md-3 pb-md-4">
   
-  <div class="col-md-5 d-flex align-items-center flex-row pl-3">
+  <div class="col-md-5 offset-md-1 d-flex align-items-center flex-row pl-3">
     <button style="width: 30px;height: 30px;padding: 3px;" class="tour_md_btn_nextprev" (click)="LeftClick()">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path fill="#ffffff"
@@ -23,13 +23,13 @@
   <!--(touchend)="touchEnd($event)" 
     (touchmove)="touchMove($event)" 
     (touchstart)="touchStart($event)" -->
-  <div class="col-12 col-md-10 slider mt-3"     
+  <div class="col-12 col-md-10 offset-md-1 slider mt-3"     
     (mouseleave)="mouseLeaveHandler()"
     (mousemove)="mouseMoveHandler($event)" 
     (mouseup)="mouseUpHandler()" 
     (mousedown)="mouseDownHandler($event)">
-    <div class="row slick_wrapper" #scrollHope>
-      <div class="witem col-10 col-sm-6 col-md-4 col-lg-3" [style.transform]="'translate3d(' + transX + 'px, 0px, 0px)'" *ngFor="let i of cardCount">
+    <div class="row slick_wrapper" #scrollHope >
+      <div class="witem col-10 col-sm-6 col-md-4 col-lg-3 transme" [style.transform]="'translate3d(' + transX + 'px, 0px, 0px)'" *ngFor="let i of cardCount">
         <div class="card" style="border: none !important;margin-bottom: 0;">
           <img src="assets/img/taj_sunset.png" draggable="false" class="card-img-top" alt="hello">
           <div class="card-body text-right mb-0">

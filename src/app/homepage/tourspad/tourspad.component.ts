@@ -13,13 +13,15 @@ export class TourspadComponent implements OnInit, AfterViewInit {
   meanWidth = 0;
   cardCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   isDown = false;
-  startX: number;
-  scrollLeft: number;
 
+  startX: number;
   tstartX: number;
+
+  walk: number;
   twalk: number;
 
   transX = 0;
+  lastTransX = 0;
 
   constructor() {
   }
@@ -35,17 +37,33 @@ export class TourspadComponent implements OnInit, AfterViewInit {
     this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
     if (e.which === 1) {
       this.isDown = true;
-      this.startX = e.pageX - this.myHope.nativeElement.offsetLeft;
-      this.scrollLeft = this.myHope.nativeElement.scrollLeft;
+      this.startX = e.pageX;
     }
   }
 
   mouseUpHandler() {
+    const trigger = this.itemWidth / 3;
+    if (this.walk > 0) { // shift from left to right
+      if (this.walk > trigger) {
+        this.transX += (this.itemWidth - this.walk);
+      } else {
+        this.transX -= this.walk;
+      }
+    } else { // negetive value
+      if (Math.abs(this.walk) > trigger) {
+
+      } else {
+
+      }
+    }
+
     this.isDown = false;
+    this.lastTransX = this.transX;
   }
 
   mouseLeaveHandler() {
     this.isDown = false;
+    this.lastTransX = this.transX;
   }
 
   mouseMoveHandler(e) {
@@ -53,25 +71,16 @@ export class TourspadComponent implements OnInit, AfterViewInit {
       return;
     }
     e.preventDefault();
-    const x = e.pageX - this.myHope.nativeElement.offsetLeft;
-    const walk = x - this.startX;
-    this.myHope.nativeElement.scrollLeft = this.scrollLeft - walk;
+    this.walk = this.lastTransX + (e.pageX - this.startX);
+    this.transX = this.walk;
   }
 
   RightClick() {
     this.transX -= this.itemWidth;
-    // this.myHope.nativeElement.scrollTo({
-    //   left: this.myHope.nativeElement.scrollLeft + this.myHope.nativeElement.querySelector('.witem').offsetWidth,
-    //   behavior: 'smooth'
-    // });
   }
 
   LeftClick() {
     this.transX += this.itemWidth;
-    // this.myHope.nativeElement.scrollTo({
-    //   left: this.myHope.nativeElement.scrollLeft - this.myHope.nativeElement.querySelector('.witem').offsetWidth,
-    //   behavior: 'smooth'
-    // });
   }
 
   touchStart(e) {
