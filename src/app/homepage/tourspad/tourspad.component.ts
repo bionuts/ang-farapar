@@ -11,15 +11,16 @@ export class TourspadComponent implements OnInit, AfterViewInit {
 
   itemWidth = 0;
   meanWidth = 0;
-  cardCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  cardCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   isDown = false;
+  step = 0;
 
   startX: number;
   tstartX: number;
 
-  walk: number;
-  walkbase: number;
-  twalk: number;
+  walk = 0;
+  walkbase = 0;
+  twalk = 0;
 
   transX = 0;
   lastTransX = 0;
@@ -46,26 +47,33 @@ export class TourspadComponent implements OnInit, AfterViewInit {
     const trigger = this.itemWidth / 3;
     if (this.walkbase > 0) { // shift from left to right
       if (this.walkbase > trigger) {
-        this.transX += (this.itemWidth - this.walkbase);
+        if (this.step < this.cardCount.length) {
+          this.transX += (this.itemWidth - this.walkbase);
+          this.step += 1.5;
+        } else {
+          this.transX -= this.walkbase;
+        }
       } else {
         this.transX -= this.walk;
       }
     } else { // negetive value
       if (Math.abs(this.walkbase) > trigger) {
-        console.log(this.walkbase, this.walk);
-        this.transX -= (this.itemWidth + this.walkbase);
+        if (this.step > 0) {
+          this.transX -= (this.itemWidth + this.walkbase);
+          this.step -= 1.5;
+        } else {
+          this.transX -= this.walkbase;
+        }
       } else {
         this.transX -= this.walk;
       }
     }
-
     this.isDown = false;
     this.lastTransX = this.transX;
   }
 
-  mouseLeaveHandler() {
-    this.isDown = false;
-    this.lastTransX = this.transX;
+  mouseLeaveHandler() {    
+    this.mouseUpHandler();
   }
 
   mouseMoveHandler(e) {
