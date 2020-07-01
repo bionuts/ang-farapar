@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-tourspad',
@@ -13,7 +13,11 @@ export class TourspadComponent implements OnInit, AfterViewInit {
   meanWidth = 0;
   cardCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   isDown = false;
-  step = 0;
+  left_vec_color = 'white';
+  right_vec_color = 'gray';
+  hopeWidth = 0;
+  boardWidth = 0;
+  letTrans = false;
 
   startX: number;
   tstartX: number;
@@ -33,6 +37,15 @@ export class TourspadComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
+    this.hopeWidth = this.myHope.nativeElement.offsetWidth;
+    this.boardWidth = this.itemWidth * this.cardCount.length;
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
+    this.transX = 0;
+    console.log(this.itemWidth);
   }
 
   mouseDownHandler(e) {
@@ -40,40 +53,50 @@ export class TourspadComponent implements OnInit, AfterViewInit {
     if (e.which === 1) {
       this.isDown = true;
       this.startX = e.pageX;
+      this.letTrans = false;
     }
   }
 
   mouseUpHandler() {
-    const trigger = this.itemWidth / 3;
+    this.letTrans = true;
+    const trigger = this.itemWidth / 4.2;
     if (this.walkbase > 0) { // shift from left to right
       if (this.walkbase > trigger) {
-        if (this.step < this.cardCount.length) {
+        if (this.transX < (this.boardWidth - this.hopeWidth - 5)) {
           this.transX += (this.itemWidth - this.walkbase);
-          this.step += 1.5;
+          this.left_vec_color = 'white';
+          this.right_vec_color = 'white';
+          if (this.transX > (this.boardWidth - this.hopeWidth - this.itemWidth)) this.left_vec_color = 'gray';
         } else {
           this.transX -= this.walkbase;
+          this.left_vec_color = 'gray';
         }
       } else {
-        this.transX -= this.walk;
+        this.transX -= this.walkbase;
       }
-    } else { // negetive value
+    } else { // negetive value --> shift from right to left
       if (Math.abs(this.walkbase) > trigger) {
-        if (this.step > 0) {
+        if (this.transX > 0) {
           this.transX -= (this.itemWidth + this.walkbase);
-          this.step -= 1.5;
+          this.left_vec_color = 'white';
+          if (this.transX < this.itemWidth) this.right_vec_color = 'gray';
         } else {
           this.transX -= this.walkbase;
+          this.right_vec_color = 'gray';
         }
       } else {
-        this.transX -= this.walk;
+        this.transX -= this.walkbase;
       }
     }
     this.isDown = false;
     this.lastTransX = this.transX;
+    this.walkbase = 0;
   }
 
-  mouseLeaveHandler() {
-    this.mouseUpHandler();
+  mouseLeaveHandler(e) {
+    if (e.which === 1) {
+      this.mouseUpHandler();
+    }
   }
 
   mouseMoveHandler(e) {
@@ -81,6 +104,7 @@ export class TourspadComponent implements OnInit, AfterViewInit {
       return;
     }
     e.preventDefault();
+    this.letTrans = false;
     this.walkbase = (e.pageX - this.startX);
     this.walk = this.lastTransX + this.walkbase;
     // console.log(this.walk, this.walkbase);
@@ -88,13 +112,25 @@ export class TourspadComponent implements OnInit, AfterViewInit {
   }
 
   RightClick() {
-    this.transX -= this.itemWidth;
-    this.lastTransX = this.transX;
+    this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
+    if (this.transX > 0) {
+      this.letTrans = true;
+      this.transX -= this.itemWidth;
+      this.lastTransX = this.transX;
+      if (this.transX < (this.boardWidth - this.hopeWidth - 5)) this.left_vec_color = 'white';
+      if (this.transX < this.itemWidth) this.right_vec_color = 'gray';
+    }
   }
 
   LeftClick() {
-    this.transX += this.itemWidth;
-    this.lastTransX = this.transX;
+    this.itemWidth = this.myHope.nativeElement.querySelector('.witem').offsetWidth;
+    if (this.transX < (this.boardWidth - this.hopeWidth - 5)) {
+      this.letTrans = true;
+      this.transX += this.itemWidth;
+      this.lastTransX = this.transX;
+      if (this.transX > this.itemWidth - 1) this.right_vec_color = 'white';
+      if (this.transX > (this.boardWidth - this.hopeWidth - 5)) this.left_vec_color = 'gray';
+    }
   }
 
   touchStart(e) {
