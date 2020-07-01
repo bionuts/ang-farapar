@@ -18,6 +18,7 @@ export class TourspadComponent implements OnInit, AfterViewInit {
   tstartX: number;
 
   walk: number;
+  walkbase: number;
   twalk: number;
 
   transX = 0;
@@ -43,17 +44,18 @@ export class TourspadComponent implements OnInit, AfterViewInit {
 
   mouseUpHandler() {
     const trigger = this.itemWidth / 3;
-    if (this.walk > 0) { // shift from left to right
-      if (this.walk > trigger) {
-        this.transX += (this.itemWidth - this.walk);
+    if (this.walkbase > 0) { // shift from left to right
+      if (this.walkbase > trigger) {
+        this.transX += (this.itemWidth - this.walkbase);
       } else {
         this.transX -= this.walk;
       }
     } else { // negetive value
-      if (Math.abs(this.walk) > trigger) {
-
+      if (Math.abs(this.walkbase) > trigger) {
+        console.log(this.walkbase, this.walk);
+        this.transX -= (this.itemWidth + this.walkbase);
       } else {
-
+        this.transX -= this.walk;
       }
     }
 
@@ -71,16 +73,20 @@ export class TourspadComponent implements OnInit, AfterViewInit {
       return;
     }
     e.preventDefault();
-    this.walk = this.lastTransX + (e.pageX - this.startX);
+    this.walkbase = (e.pageX - this.startX);
+    this.walk = this.lastTransX + this.walkbase;
+    // console.log(this.walk, this.walkbase);
     this.transX = this.walk;
   }
 
   RightClick() {
     this.transX -= this.itemWidth;
+    this.lastTransX = this.transX;
   }
 
   LeftClick() {
     this.transX += this.itemWidth;
+    this.lastTransX = this.transX;
   }
 
   touchStart(e) {
