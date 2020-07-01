@@ -72,7 +72,7 @@ export class TourspadComponent implements OnInit, AfterViewInit {
     this.lastTransX = this.transX;
   }
 
-  mouseLeaveHandler() {    
+  mouseLeaveHandler() {
     this.mouseUpHandler();
   }
 
