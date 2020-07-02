@@ -13,8 +13,8 @@ export class TourspadComponent implements OnInit, AfterViewInit {
   meanWidth = 0;
   cardCount = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   isDown = false;
-  left_vec_color = 'white';
-  right_vec_color = 'gray';
+  leftVectorColor = 'white';
+  rightVectorColor = 'gray';
   hopeWidth = 0;
   boardWidth = 0;
   letTrans = false;
@@ -64,12 +64,12 @@ export class TourspadComponent implements OnInit, AfterViewInit {
       if (this.walkbase > trigger) {
         if (this.transX < (this.boardWidth - this.hopeWidth - 5)) {
           this.transX += (this.itemWidth - this.walkbase);
-          this.left_vec_color = 'white';
-          this.right_vec_color = 'white';
-          if (this.transX > (this.boardWidth - this.hopeWidth - this.itemWidth)) this.left_vec_color = 'gray';
+          this.leftVectorColor = 'white';
+          this.rightVectorColor = 'white';
+          if (this.transX > (this.boardWidth - this.hopeWidth - this.itemWidth)) { this.leftVectorColor = 'gray'; }
         } else {
           this.transX -= this.walkbase;
-          this.left_vec_color = 'gray';
+          this.leftVectorColor = 'gray';
         }
       } else {
         this.transX -= this.walkbase;
@@ -78,11 +78,11 @@ export class TourspadComponent implements OnInit, AfterViewInit {
       if (Math.abs(this.walkbase) > trigger) {
         if (this.transX > 0) {
           this.transX -= (this.itemWidth + this.walkbase);
-          this.left_vec_color = 'white';
-          if (this.transX < this.itemWidth) this.right_vec_color = 'gray';
+          this.leftVectorColor = 'white';
+          if (this.transX < this.itemWidth) { this.rightVectorColor = 'gray'; }
         } else {
           this.transX -= this.walkbase;
-          this.right_vec_color = 'gray';
+          this.rightVectorColor = 'gray';
         }
       } else {
         this.transX -= this.walkbase;
@@ -117,8 +117,8 @@ export class TourspadComponent implements OnInit, AfterViewInit {
       this.letTrans = true;
       this.transX -= this.itemWidth;
       this.lastTransX = this.transX;
-      if (this.transX < (this.boardWidth - this.hopeWidth - 5)) this.left_vec_color = 'white';
-      if (this.transX < this.itemWidth) this.right_vec_color = 'gray';
+      if (this.transX < (this.boardWidth - this.hopeWidth - 5)) { this.leftVectorColor = 'white'; }
+      if (this.transX < this.itemWidth) { this.rightVectorColor = 'gray'; }
     }
   }
 
@@ -128,8 +128,8 @@ export class TourspadComponent implements OnInit, AfterViewInit {
       this.letTrans = true;
       this.transX += this.itemWidth;
       this.lastTransX = this.transX;
-      if (this.transX > this.itemWidth - 1) this.right_vec_color = 'white';
-      if (this.transX > (this.boardWidth - this.hopeWidth - 5)) this.left_vec_color = 'gray';
+      if (this.transX > this.itemWidth - 1) { this.rightVectorColor = 'white'; }
+      if (this.transX > (this.boardWidth - this.hopeWidth - 5)) { this.leftVectorColor = 'gray'; }
     }
   }
 
