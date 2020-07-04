@@ -17,7 +17,6 @@ import { UserBalanceComponent } from './profile_panel/user-balance/user-balance.
 import { TicketingComponent } from './ticketing_panel/ticketing/ticketing.component';
 import { TourspadComponent } from './homepage/tourspad/tourspad.component';
 import { SecJobComponent } from './homepage/sec-job/sec-job.component';
-import { MembersPadComponent } from './homepage/members-pad/members-pad.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { InFlightsComponent } from './ticketing_panel/in-flights/in-flights.component';
 import { OutFlightsComponent } from './ticketing_panel/out-flights/out-flights.component';
@@ -42,7 +41,6 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     TicketingComponent,
     TourspadComponent,
     SecJobComponent,
-    MembersPadComponent,
     MainPageComponent,
     InFlightsComponent,
     OutFlightsComponent,
