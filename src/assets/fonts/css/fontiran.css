@@ -17,12 +17,6 @@ This set of fonts are used in this project under the license: (.....)
 *	
 **/
 @font-face {
-	font-family: GoogFont;
-	font-style: normal;	
-	src: url('../fonts/ttf/OdibeeSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
 	font-family: IRANSans;
 	font-style: normal;
 	font-weight: 900;
